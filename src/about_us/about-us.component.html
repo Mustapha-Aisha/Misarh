@@ -1,0 +1,133 @@
+<div class="container-fluid h-full position-relative" style="height: 700px;">
+    <video autoplay loop muted playsinline class="position-absolute w-100 h-100" style="object-fit: cover; z-index: 1;">
+        <source src="https://videos.pexels.com/video-files/7303017/7303017-hd_1920_1080_30fps.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="position-absolute w-100 h-100" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)); z-index: 2;"></div>
+
+    <div class="d-flex justify-content-center align-items-center position-relative" style="height: 100%; z-index: 3;">
+        <div class="text-center text-white px-4">
+            <span class="d-block h3 mb-4">Misarh</span>
+            <span class="d-block display-4 font-weight-bold mb-5" style="font-size: 100px; text-transform: uppercase;">Unveil Your Personal Aromatic Signature</span>
+
+            <p class="font-weight-bold mt-5" style="font-size: 1.2rem;">Perfume that’s smarter than your average scent. Lorem ipsum dolor sit amet, consectetur.</p>
+            <a href="#" class="btn btn-light py-3 px-5 text-center mb-4 text-xl font-weight-medium border-0 rounded-pill">Get Started</a>
+        </div>
+    </div>
+</div>
+
+<div class="container py-5 d-flex">
+    <div class="col-md-6 d-flex flex-column justify-content-start align-items-start mb-5">
+        <h2 class="text-muted fw-semibold mb-3">Dare to be different</h2>
+        <h1 class="fs-1 fw-bold lh-sm mb-3">
+            Fragrance that
+            <span class="text-danger fst-italic">pushes the boundaries of possibility.</span>
+            Lorem ipsum dolor sit amet,
+            <span class="text-danger fst-italic">consectetur adipiscing elit.</span>
+        </h1>
+    </div>
+
+    <div class="col-md-6 d-flex flex-column justify-content-end align-items-end">
+        <div class="d-flex justify-content-between w-75">
+            <div class="text-center">
+                <h5 class="text-muted mb-2">Years Experience</h5>
+                <h1 class="display-6 fw-bold mb-0">25+</h1>
+            </div>
+            <div class="text-center">
+                <h5 class="text-muted mb-2">Professional Staff</h5>
+                <h1 class="display-6 fw-bold mb-0">140+</h1>
+            </div>
+            <div class="text-center">
+                <h5 class="text-muted mb-2">Positive Reviews</h5>
+                <h1 class="display-6 fw-bold mb-0">99%</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container p-5 w-100" style="background-color: #f8f8f8; border-top: 2px solid #004D40;">
+    <h2 class="fw-bold text-center" style="font-size: 2.4rem; color: #004D40;">Brand Overview</h2>
+    <p class="mt-3 mx-auto text-center" style="color: #666; max-width: 600px; font-size: 1rem; font-style: italic;">
+        Veera is a luxury fragrance brand dedicated to creating bespoke perfumes that reflect your unique personality.
+        Our expert perfumers use the finest ingredients to craft scents that are as individual as you are.
+        Whether you prefer floral, woody, or oriental notes, we have something for everyone.
+        Experience the art of personalized fragrance with Veera.
+    </p>
+</div>
+
+<div class="container py-5">
+    <div class="row align-items-center">
+        <div class="col-lg-6 position-relative">
+            <img src="https://images.pexels.com/photos/6694130/pexels-photo-6694130.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load" alt="Background" class="img-fluid w-100">
+            <div class="position-absolute top-50 start-50 translate-middle" style="width: 70%; max-width: 100%; object-fit: cover;">
+                <img src="https://images.pexels.com/photos/8450221/pexels-photo-8450221.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load" alt="Perfume Bottle" class="img-fluid rounded shadow">
+            </div>
+        </div>
+
+        <div class="col-lg-6 text-center text-lg-start mt-4 mt-lg-0">
+            <h6 class="text-uppercase text-muted mb-2">About Aurra</h6>
+            <h1 class="display-5 fw-bold mb-3">
+                The Scent That <span class="text-danger fst-italic">Lingers</span>, the Memory That <span class="text-danger fst-italic">Lasts</span>
+            </h1>
+            <p class="text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla arcu tortor, elementum euismod enim id, finibus fermentum sem. Duis leo mauris, pharetra ac vulputate.</p>
+            <a href="#" class="btn btn-danger btn-lg">Learn More</a>
+        </div>
+    </div>
+</div>
+
+<div class="container text-center py-5">
+    <h2 class="display-4 fw-bold" style="font-size: 3rem; color: #004D40;">The Art of Gifting</h2>
+    <p class="mt-3 mx-auto" style="color: #666; max-width: 600px; display: block; line-height: 1.8; font-size: 1.1rem; font-style: italic;">
+        Ribbons, bows, tissue paper, and thoughtful touches. At Dior, each gift is meticulously crafted into an extraordinary experience. Inside every Dior gift box, the essence of our ateliers at 30 Avenue Montaigne is brought to life, making each present truly exceptional.
+    </p>
+</div>
+
+<div class="container py-5">
+    <div class="text-center mb-4">
+        <h2 class="fw-bold" style="font-size: 2.4rem; letter-spacing: 0.5px; color: #004D40;">Best Sellers</h2>
+        <p class="mt-3 mx-auto" style="color: #666; max-width: 600px; line-height: 1.8; font-size: 1rem; font-style: italic;">
+            Discover the fragrances loved by our customers and crafted to perfection. Shop the best sellers today.
+        </p>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <div *ngFor="let product of products" class="col">
+            <div class="card border-0 shadow-lg rounded-3">
+                <img [src]="product.image" class="card-img-top" alt="Product Image" style="height: 300px; object-fit: cover;">
+                <div class="card-body text-center">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <p class="card-text">{{ product.description }}</p>
+                    <a href="#" class="btn btn-primary py-2 px-4 rounded-pill">Shop Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container py-5">
+    <div class="text-center mb-4">
+        <h2 class="fw-bold" style="font-size: 2.4rem; color: #004D40;">What Our Customers Are Saying</h2>
+        <p class="mt-3 mx-auto" style="color: #666; max-width: 600px; line-height: 1.8; font-size: 1rem; font-style: italic;">
+            Don’t just take our word for it – hear from our delighted customers about their experiences with our luxurious scents.
+        </p>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div *ngFor="let testimonial of testimonials" class="col">
+            <div class="card testimonial-card border-0 shadow-lg rounded-3">
+                <div class="card-body text-center">
+                    <p class="card-text" style="font-size: 1.2rem; color: #333; font-style: italic;">
+                        {{ testimonial.text }}
+                    </p>
+                    <h5 class="card-title mt-3" style="font-size: 1.5rem; color: #004D40;">
+                        {{ testimonial.name }}
+                    </h5>
+                    <p class="card-subtitle text-muted">{{ testimonial.role }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

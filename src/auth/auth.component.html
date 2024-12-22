@@ -1,0 +1,95 @@
+<div class="hero-section">
+  <div class="form-container">
+    <div class="form-header">
+      <h2 *ngIf="isLogin">Welcome Back</h2>
+      <h2 *ngIf="!isLogin">Create an Account</h2>
+    </div>
+
+    <div class="form-body">
+      <div class="form-wrapper" [ngClass]="{'is-login': isLogin, 'is-signup': !isLogin}">
+        <!-- Login Form -->
+        <form *ngIf="isLogin" (ngSubmit)="onLogin()" #loginForm="ngForm" class="form">
+          <div class="form-group">
+            <label for="loginEmail">Email Address</label>
+            <input
+              type="email"
+              id="loginEmail"
+              name="email"
+              [(ngModel)]="loginData.email"
+              placeholder="Your email address"
+              required
+            /> 
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Password</label>
+            <input
+              type="password"
+              id="loginPassword"
+              name="password"
+              [(ngModel)]="loginData.password"
+              placeholder="Your password"
+              required
+            />
+          </div>
+          <button type="submit">Login</button>
+          <div class="switch-form">
+            <span>Don't have an account? <button type="button" (click)="toggleForm(false)" class="btn-link">Sign up</button></span>
+          </div>
+        </form>
+
+        <!-- Signup Form -->
+        <form *ngIf="!isLogin" (ngSubmit)="onSignup()" #signupForm="ngForm" class="form">
+          <div class="form-group">
+            <label for="signupFirstName"> Name</label>
+            <input
+              type="text"
+              id="signupName"
+              name="Name"
+              [(ngModel)]="signupData.name"
+              placeholder="Your full name"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="signupEmail">Email Address</label>
+            <input
+              type="email"
+              id="signupEmail"
+              name="email"
+              [(ngModel)]="signupData.email"
+              placeholder="Your email address"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="signupPassword">Password</label>
+            <input
+              type="password"
+              id="signupPassword"
+              name="password"
+              [(ngModel)]="signupData.password"
+              placeholder="Your password"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="signupConfirmPassword">Confirm Password</label>
+            <input
+              type="password"
+              id="signupConfirmPassword"
+              name="confirmPassword"
+              [(ngModel)]="signupData.confirmPassword"
+              placeholder="Confirm your password"
+              required
+            />
+          </div>
+          <button type="submit">Sign up</button>
+          <div class="switch-form">
+            <span>Already have an account? <button type="button" (click)="toggleForm(true)" class="btn-link">Log in</button></span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

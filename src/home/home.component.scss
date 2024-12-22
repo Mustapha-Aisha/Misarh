@@ -1,0 +1,119 @@
+
+body {
+  font-family: 'Lora', serif; 
+  color: #fff;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #111; 
+}
+
+.hero-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: url('https://images.pexels.com/photos/3253432/pexels-photo-3253432.jpeg') no-repeat center center/cover;
+  background-attachment: fixed; 
+  text-align: center;
+  color: #fff;
+  font-family: 'Lora', serif; 
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 5rem; 
+  font-weight: 700;
+  color: #f8f8f8;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.7);
+  margin-bottom: 20px;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.hero-subtitle {
+  font-family: 'Lora', serif; 
+  font-size: 1.8rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.8;
+  margin-bottom: 50px;
+  font-weight: 300;
+  text-transform: capitalize;
+  animation: fadeIn 2s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.custom-input {
+  width: 60%;
+  padding: 15px 20px;
+  font-size: 1.3rem;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50px;
+  text-align: center;
+  margin: 0 auto;
+  box-shadow: 0 8px 20px rgba(69, 60, 60, 0.6);
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 2s ease-out forwards;
+}
+
+.custom-input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 12px 25px rgba(255, 255, 255, 0.4);
+}
+
+@keyframes focusIn {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+.custom-button {
+  background: linear-gradient(45deg, #d93b64, #f3a8d1);
+  color: #fff;
+  padding: 15px 50px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 0 10px 25px rgba(13, 11, 11, 0.6);
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.custom-button:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 15px 30px rgba(212, 30, 135, 0.6);
+  background: linear-gradient(45deg, #f3a8d1, #d93b64);
+  animation: glow 0.5s ease-out infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 20px rgba(212, 30, 135, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 40px rgba(212, 30, 135, 0.8);
+  }
+}

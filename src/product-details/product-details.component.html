@@ -1,0 +1,96 @@
+<div class="product-container">
+  <div class="product-image">
+    <img [src]="product.image_url" alt="Image of {{ product.name }}" />
+  </div>
+    <div class="product-details">
+    <h1>{{ product.name }}</h1>
+    <p class="price">Price: {{ price.toFixed(2) }}</p>
+    <p class="scent-description"><strong>Scent Description:</strong> {{ product.scentDescription }}</p>
+
+    <div class="category-variation">
+      <div class="form-group">
+        <label for="category">Category:</label>
+        <select id="category" [(ngModel)]="selectedCategory" (ngModelChange)="calculatePriceofPerfume()">
+          <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="variation">Variation (Size):</label>
+        <select id="variation" [(ngModel)]="selectedVariation" (ngModelChange)="calculatePriceofPerfume()">
+          <option *ngFor="let variation of variations" [value]="variation">{{ variation }}</option>
+        </select>
+      </div>
+    </div>
+
+    <button type="submit" (click) = "addToCart()" class="btn-add-to-cart" [disabled]="!selectedCategory || !selectedVariation || (selectedCategory === 'DEFAULT')">
+      Add to Cart
+    </button>
+
+    <div *ngIf="product.otherCombinations?.length" class="recommended-pairings">
+      <h4>Recommended Pairings:</h4>
+      <ul>
+        <li *ngFor="let combination of product.otherCombinations" (click)="switchToCombination(combination)">
+          {{ combination }}
+        </li>
+      </ul>
+    </div>
+
+    <button *ngIf="originalProduct && product.name !== originalProduct.name"
+      (click)="switchToCombination(originalProduct)">
+      Back to Original Product
+    </button>
+  </div>
+
+</div>
+
+
+<!-- <div class="product-container">
+  <div class="product-image">
+    <img [src]="product.image_url" alt="Product Image" />
+  </div>
+
+    <div class="product-details">
+    <h1>{{ product.name }}</h1>
+    <p class="price">Price: {{ price.toFixed(2) }}</p>
+    <p><strong>Scent Description:</strong> {{ product.scentDescription }}</p>
+    <div *ngIf="product.scentNotes?.length">
+      <label class="category-label"><strong>Notes:</strong></label>
+      <ul>
+        <li *ngFor="let note of product.scentNotes">{{ note }}</li>
+      </ul>
+    </div>
+
+    <div class="size-selector">
+      <div class="more-info">
+        <div class="form-group">
+          <label for="category">Category:</label>
+          <select id="category" [(ngModel)]="selectedCategory" (ngModelChange)="calculatePriceofPerfume()" class="classy-select">
+            <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+          </select>
+        </div>
+
+        <label for="variation">Variation (Size):</label>
+        <select id="variation" [(ngModel)]="selectedVariation" (ngModelChange)="calculatePriceofPerfume()" class="classy-select">
+          <option *ngFor="let variation of variations" [value]="variation">{{ variation }}</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn add-to-cart" [disabled]="!selectedCategory || !selectedVariation">
+        Add to Cart
+      </button>
+    </div>
+
+    <div *ngIf="product.otherCombinations?.length">
+      <h4>Recommended Pairings:</h4>
+      <ul>
+        <li *ngFor="let combination of product.otherCombinations" (click)="switchToCombination(combination)">
+          {{ combination }}
+        </li>
+      </ul>
+    </div>
+    <button *ngIf="originalProduct && product.name !== originalProduct.name" (click)="switchToCombination(originalProduct)">
+      Back to Original Product
+    </button>
+  </div> 
+</div> -->
