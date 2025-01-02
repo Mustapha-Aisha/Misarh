@@ -1,0 +1,22 @@
+/* shipping-form.component.css */
+.shipping-details {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .shipping-details .form-label {
+    font-weight: bold;
+  }
+  .shipping-details .form-control {
+    border-radius: 8px;
+  }
+  .shipping-details button {
+    background-color: #28a745;
+    color: white;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  .shipping-details button:hover {
+    background-color: #218838;
+  }
+  

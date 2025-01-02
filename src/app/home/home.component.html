@@ -1,0 +1,25 @@
+<div class="hero-section d-flex">
+  <div class="overlay">
+    <div class="content text-center" >
+      <h1 class="hero-title">Unveil Your Signature Scent</h1>
+      <p class="hero-subtitle">
+        A fragrance is your invisible signature. Describe your dream scent below, and let us craft it for you.
+      </p>
+      <form (ngSubmit)="onSubmit()" class="form">
+        <input
+          type="text"
+          class="form-control custom-input"
+          placeholder="Describe your scent... (e.g., sensual, spicy, with a woody undertone)"
+          [(ngModel)]="formData.scentDescription"
+          name="scentDescription"
+          required
+        />
+        <button class="btn custom-button mt-4" type="submit">Discover My Scent</button>
+      </form>
+    </div>
+  </div>
+
+  
+</div>
+
+<!-- <app-footer></app-footer> -->

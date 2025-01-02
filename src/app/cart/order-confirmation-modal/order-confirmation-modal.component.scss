@@ -1,0 +1,126 @@
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.order-id, .estimated-delivery, .status {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.status-label {
+  font-weight: bold;
+  color: #27ae60; /* Green for successful order */
+}
+
+.close-btn {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Order Status Animation */
+.order-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.circle-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  position: relative;
+}
+
+.status-circle {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #3498db;
+  border-radius: 50%;
+  position: relative;
+  text-align: center;
+  font-size: 12px;
+  color: #3498db;
+  transition: all 0.3s ease-in-out;
+}
+
+.status-circle.active {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.status-circle .bus {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: #f39c12;
+  border-radius: 50%;
+  transition: transform 0.5s ease;
+}
+
+.status-circle.active .bus {
+  transform: translateX(-50%) translateY(50px);
+}
+
+.status-label {
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+  font-size: 14px;
+}
+
+.status-circle:first-child .bus {
+  animation: moveBus 3s infinite linear;
+}
+
+@keyframes moveBus {
+  0% { transform: translateX(-50%) translateY(0); }
+  100% { transform: translateX(-50%) translateY(50px); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}

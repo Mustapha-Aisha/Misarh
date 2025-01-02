@@ -1,0 +1,16 @@
+.modal {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.modal-dialog {
+    /* max-width: 150px; */
+}
+
+.modal-content {
+    background-color: transparent !important;
+}
+
+.spinner-border {
+    width: 6rem;
+    height: 6rem;
+}
