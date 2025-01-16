@@ -94,6 +94,18 @@ export class ApiService {
     return this.http.put<APIResponse>('http://localhost:4500/customer/update', body , {headers});
    
   }
+
+  getOrders(): Observable<any>{
+    const token = localStorage.getItem("customer"); 
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${token}`  
+    });
+    return this.http.get('http://localhost:4500/order/', {headers} )
+
+  }
+
+
 }
 
 

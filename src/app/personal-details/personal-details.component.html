@@ -1,0 +1,52 @@
+<app-navbar></app-navbar>
+<div class="account-page-container container">
+    <!-- Left Section: Account Info -->
+    <div class="account-info-section">
+      <div class="account-header">
+        <p class="section-title">YOUR ACCOUNT</p>
+        <h1 class="account-name">AISHA MUSTAPHA</h1>
+        <p class="account-status">Status: <span class="not-subscribed">Not subscribed</span></p>
+      </div>
+    </div>
+
+    <!-- Right Section: Personal Details -->
+    <div class="account-details-section">
+      <h3 class="details-title">Personal Details</h3>
+      <form class="details-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" class="form-control" value="Aisha" />
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" class="form-control" value="Mustapha" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" class="form-control" value="ayshamustapha99@gmail.com" />
+          </div>
+          <div class="form-group">
+            <label for="birthday">Birthday</label>
+            <input type="date" id="birthday" class="form-control" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>What type of scents do you prefer?</label>
+          <div class="radio-group">
+            <label>
+              <input type="radio" name="scentPreference" value="Perfumes" checked /> Perfumes
+            </label>
+            <label>
+              <input type="radio" name="scentPreference" value="Colognes" /> Colognes
+            </label>
+          </div>
+        </div>
+        <button type="submit" class="update-button">Update Information</button>
+      </form>
+    </div>
+</div>
+
+<app-footer></app-footer>

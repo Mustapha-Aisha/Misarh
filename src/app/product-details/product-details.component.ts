@@ -154,23 +154,22 @@ export class ProductDetailsComponent implements OnInit {
       quantity: 1, 
     };
 
-    // Update the product first
     this.apiService.updateProduct(this.product.id, this.product).subscribe({
       next: (updateRes: any) => {
-        if(updateRes.status){
-          this.apiService.addToCart(payload).subscribe({
-            next: (cartRes: { status_code: number; message: any; }) => {
-              if (cartRes.status_code === 200) {
-                this.router.navigate(['/cart']);
-              } else {
-                console.error('Failed to add item to cart:', cartRes.message);
-              }
-            },
-            error: (cartErr: any) => {
-              console.error('Error adding item to cart:', cartErr);
-            },
-          });
-        }
+      if(updateRes.status_code !== 200) return console.error('Failed to update product:', updateRes.message);
+        this.apiService.addToCart(payload).subscribe({
+          next: (cartRes: { status_code: number; message: any; }) => {
+            if (cartRes.status_code === 200) {
+              console.log('Item added to cart successfully:', cartRes);
+              this.router.navigate(['/cart']);
+            } else {
+              console.error('Failed to add item to cart:', cartRes.message);
+            }
+          },
+          error: (cartErr: any) => {
+            console.error('Error adding item to cart:', cartErr);
+          },
+        });
       },
       error: (updateErr: any) => {
         console.error('Error updating product:', updateErr);

@@ -10,6 +10,8 @@ import { ApiService } from './api.service';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PageLoaderService } from '../shared/page-loader/page-loader.service';
+import { NavbarComponent } from "./home/navbar/navbar.component";
+import { FooterComponent } from "./home/footer/footer.component";
 
 @NgModule({
   declarations: [
@@ -24,7 +26,10 @@ import { PageLoaderService } from '../shared/page-loader/page-loader.service';
     AppRoutingModule,
     HttpClientModule
     // RouterModule.forChild(routes)
-  ],
+    ,
+    NavbarComponent,
+    FooterComponent
+],
 
   providers: [ApiService, PageLoaderService],
   bootstrap: [AppComponent],

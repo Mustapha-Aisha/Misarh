@@ -1,22 +1,108 @@
-/* shipping-form.component.css */
+/* General Layout */
 .shipping-details {
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #f9fafb; /* Light greyish background */
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Form Labels */
+.shipping-details .form-label {
+  font-weight: 600;
+  color: #495057;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Form Controls */
+.shipping-details .form-control {
+  border-radius: 10px;
+  background-color: #f1f3f5;
+  border: 1px solid #ced4da;
+  padding: 0.75rem;
+  font-size: 1rem;
+  color: #495057;
+  transition: all 0.3s ease;
+}
+
+.shipping-details .form-control:focus {
+  border-color: #28a745;
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.25);
+}
+
+/* Select dropdown */
+.shipping-details .form-select {
+  border-radius: 10px;
+  background-color: #f1f3f5;
+  padding: 0.75rem;
+  border: 1px solid #ced4da;
+  color: #495057;
+  transition: all 0.3s ease;
+}
+
+.shipping-details .form-select:focus {
+  border-color: #28a745;
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.25);
+}
+
+/* Button Styles */
+.shipping-details button {
+  background-color: #28a745;
+  color: white;
+  border-radius: 50px;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.shipping-details button:disabled {
+  background-color: #d6e8d5;
+  cursor: not-allowed;
+}
+
+.shipping-details button:hover {
+  background-color: #218838;
+  transform: translateY(-3px);
+}
+
+.shipping-details button:active {
+  background-color: #1e7e34;
+  transform: translateY(1px);
+}
+
+/* Modal */
+// .confirmation-modal {
+//   position: absolute;
+//   top: 10%;
+//   left: 50%;
+//   transform: translateX(-50%);
+//   z-index: 1050;
+// }
+
+.shipping-details h4 {
+  font-size: 1.75rem;
+  color: #007bff;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Add some subtle effects */
+.shipping-details .mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+/* Spacing & Layout Adjustments */
+@media (max-width: 768px) {
+  .shipping-details {
+    padding: 1.5rem;
   }
-  .shipping-details .form-label {
-    font-weight: bold;
-  }
-  .shipping-details .form-control {
-    border-radius: 8px;
-  }
+
   .shipping-details button {
-    background-color: #28a745;
-    color: white;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    padding: 0.75rem;
   }
-  .shipping-details button:hover {
-    background-color: #218838;
-  }
-  
+}

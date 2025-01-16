@@ -35,15 +35,14 @@ export class AuthComponent {
   }
 
   onLogin(): void {
-    console.log('Login data submitted:', this.loginData);
     this.apiService.login(this.loginData).subscribe({
       next: (response: any) => { 
         localStorage.setItem('customer', response.data.access_token);  
+        localStorage.setItem('customer-info', JSON.stringify(response.data.customer));  
         this.router.navigate(['/playground/misarh/home']); 
       },
       error: (err) => {
         console.error('Login failed', err);
-       
       }
     });
   }

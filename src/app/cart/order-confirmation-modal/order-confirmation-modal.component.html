@@ -1,20 +1,19 @@
 <div class="modal-overlay">
   <div class="modal-content">
-    <h2 class="modal-title">Order Placed Successfully!</h2>
-    <p class="order-id">Order ID: <span>{{ orderId }}</span></p>
-    <p class="estimated-delivery">Estimated Delivery: <span>{{ estimatedDelivery }}</span></p>
-    <p class="status">Status: <span class="status-label">Placed</span></p>
-    
-    <!-- Order Status Animation -->
-    <div class="order-status">
-      <div class="circle-container">
-        <div class="status-circle" *ngFor="let status of statuses; let i = index" [ngClass]="{'active': currentStatus === i}">
-          <div class="bus" [ngClass]="{'move': currentStatus === i}"></div>
-          <span class="status-label">{{ status }}</span>
-        </div>
-      </div>
+    <div class="modal-header">
+      <h2 class="modal-title">Order Placed Successfully!</h2>
+      <button class="close-btn" (click)="close()">
+        <span>&times;</span>
+      </button>
     </div>
 
-    <button class="close-btn" (click)="close()">Close</button>
+    <div class="modal-body">
+      <p class="order-id">Order ID: <span>{{ orderId }}</span></p>
+      <p class="status">Status: <span class="status-label">Placed</span></p>
+    </div>
+
+    <div class="modal-footer">
+      <button class="primary-btn" (click)="close()">Okay</button>
+    </div>
   </div>
 </div>

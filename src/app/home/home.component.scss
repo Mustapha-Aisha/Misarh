@@ -10,21 +10,13 @@ body {
 
 .hero-section {
   position: relative;
-  display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: url('https://images.pexels.com/photos/3253432/pexels-photo-3253432.jpeg') no-repeat center center/cover;
+  background: url('https://images.pexels.com/photos/7670678/pexels-photo-7670678.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center/cover;
   background-attachment: fixed; 
   text-align: center;
   color: #fff;
-  font-family: 'Lora', serif; 
-  overflow: hidden;
-  transition: all 0.5s ease-in-out;
-}
-
-.hero-title {
-  font-family: 'Playfair Display', serif;
   font-size: 5rem; 
   font-weight: 700;
   color: #f8f8f8;
