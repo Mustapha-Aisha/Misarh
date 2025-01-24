@@ -1,58 +1,33 @@
-<div class="surface-overlay px-3 sm:px-7 flex flex-wrap align-items-center justify-content-between relative">
-    <!-- Hamburger Menu for Mobile View -->
-    <a pRipple pStyleClass="#nav-2" enterClass="hidden" leaveToClass="hidden"
-        class="p-ripple p-element cursor-pointer flex align-items-center lg:hidden text-700 mr-3">
-        <i class="pi pi-bars text-4xl"></i><span class="p-ink"></span>
-    </a>
+<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark " arial-label="Misarh navigation bar">
+    <div class="container">
+        <a class="navbar-brand" href="home">M<span>.</span></a>
 
-    <!-- Navbar -->
-    <nav class="navbar surface-overlay flex justify-content-between align-items-center w-full">
-        <!-- Logo Section -->
-        <div class="navbar-logo flex align-items-center">
-            <img src="https://blocks.primeng.org/assets/images/blocks/logos/peak-700.svg" alt="Logo"
-                class="h-10 w-auto" />
-            <span class="ml-2 text-lg font-bold text-700">AppName</span>
-        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMisarh"
+            aria-controls="navbarsMisarh" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-        <!-- Navigation Links -->
-        <ul class="navbar-links hidden lg:flex space-x-8">
-            <li><a href="#" class="text-700 hover:text-primary font-medium">Home</a></li>
-            <li><a href="#" (click)='route("about")' class="text-700 hover:text-primary font-medium">About</a></li>
-            <li><a href="#" (click)='route("product-details")'
-                    class="text-700 hover:text-primary font-medium">Contact</a></li>
-            <li>
+        <div class="collapse navbar-collapse" id="navbarsMisarh">
+            <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+                <li class="nav-item ">
+                    <a class="nav-link" href="home">Home</a>
+                </li>
+                <li><a class="nav-link" href="product-details">Shop</a></li>
+                <li><a class="nav-link" href="about">About us</a></li>
+                <li><a class="nav-link" href="services.html">Services</a></li>
+                <li><a class="nav-link" href="blog.html">Blog</a></li>
+                <li><a class="nav-link" href="contact.html">Contact us</a></li>
+            </ul>
 
-            </li>
-        </ul>
-
-        <!-- Right Icons: Search and AM Dropdown -->
-        <!-- Cart Icon -->
-        <nav class="navbar">
-            <div class="container">
-                <div class="logo">Brand Logo</div>
-                <div class="cart-icon">🛒</div>
-            </div>
-        </nav>
-        <div class="navbar-icons flex items-center space-x-6">
-            <!-- Search Icon -->
-            <a href="#" class="search-icon text-700 hover:text-primary">
-                <i class="pi pi-search text-xl"></i>
-            </a>
-
-            <!-- AM Dropdown -->
-            <div class="user-menu relative">
-                <!-- AMG Icon -->
-                <div class="user-icon cursor-pointer flex items-center justify-center font-bold bg-primary border-circle text-white h-10 w-10"
-                    (click)="toggleDropdown()">
-                    AM
-                </div>
+            <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+                <li  (click)="toggleDropdown()"><a class="nav-link" href="javascript:void(0)"><img src="../../../assets/images/user.svg" alt="User"></a></li>
 
                 <!-- Dropdown Menu -->
                 <div class="menu-dropdown absolute right-0 z-5 mt-3 shadow-lg bg-white p-4 rounded-lg w-60"
-                    [ngClass]="{ hidden: !isDropdownVisible }">
+                [ngClass]="{ 'show': isDropdownVisible, 'hidden': !isDropdownVisible }">
                     <!-- Membership Section -->
                     <div class="menu-section mb-4">
-                        <h4 class="text-primary mb-2 text-sm font-semibold">YOUR MEMBERSHIP</h4>
+                        <h4 class="mb-2 text-sm font-semibold">YOUR MEMBERSHIP</h4>
                         <a (click)='route("manage-fragrance")' class="text-700 block mb-2 hover:text-primary">
                             Manage your fragrances
                         </a>
@@ -66,7 +41,7 @@
 
                     <!-- Account Section -->
                     <div class="menu-section">
-                        <h4 class="text-primary mb-2 text-sm font-semibold">YOUR ACCOUNT</h4>
+                        <h4 class=" mb-2 text-sm font-semibold">YOUR ACCOUNT</h4>
                         <a (click)='route("shipping-form")' class="text-700 block mb-2 hover:text-primary">
                             Shipping information
                         </a>
@@ -81,7 +56,11 @@
                         </a>
                     </div>
                 </div>
-            </div>
+                <!-- End of Dropdown Menu -->
+
+                <li><a class="nav-link" href="cart.html"><img src="../../../assets/images/cart.svg"></a></li>
+            </ul>
         </div>
-    </nav>
-</div>
+    </div>
+
+</nav>

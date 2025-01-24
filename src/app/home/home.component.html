@@ -1,4 +1,237 @@
 <app-navbar></app-navbar>
+<!-- Start Hero Section -->
+<div class="hero">
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="col-lg-5">
+        <div class="content intro-excerpt">
+          <h1 class="hero-title">Unveil Your <span class="d-block">Signature Scent</span></h1>
+          <p class="mb-4">A fragrance is your invisible signature. Describe your dream scent below, and let us craft it for you.</p>
+          <form (ngSubmit)="onSubmit()" class="form">
+            <input type="text" class="form-control custom-input"
+              placeholder="Describe your scent... (e.g., sensual, spicy, with a woody undertone)"
+              [(ngModel)]="formData.scentDescription" name="scentDescription" required />
+            <button class="btn btn-white-outline custom-button" type="submit">Discover My Scent</button>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="hero-img-wrap ">
+          <img src="../../assets/images/perfume-bottle.png" class="img-fluid hero-img" alt="Image">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Hero Section -->
+
+<!-- Start Product Section -->
+<div class="product-section">
+  <div class="container">
+    <div class="row">
+
+      <!-- Start Column 1 -->
+      <div class="col-md-12 col-lg-3 mb-5 mb-lg-0">
+        <h2 class="mb-4 section-title">Crafted with excellent material.</h2>
+        <p class="mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit
+          imperdiet dolor tempor tristique. </p>
+        <p><a href="shop.html" class="btn">Explore</a></p>
+      </div>
+      <!-- End Column 1 -->
+
+      <!-- Start Column 2 -->
+      <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+        <a class="product-item" href="cart.html">
+          <img src="https://file.aiquickdraw.com/imgcompressed/img/compressed_b513e3221054b3d4179868dcd6f4c311.webp" class="img-fluid product-thumbnail">
+          <h3 class="product-title">Sublime</h3>
+          <span class="icon-cross">
+            <img src="../../assets/images/cross.svg" class="img-fluid">
+          </span>
+        </a>
+      </div>
+      <!-- End Column 2 -->
+
+      <!-- Start Column 3 -->
+      <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+        <a class="product-item" href="cart.html">
+          <img src="https://file.aiquickdraw.com/imgcompressed/img/compressed_b513e3221054b3d4179868dcd6f4c311.webp" class="img-fluid product-thumbnail">
+          <h3 class="product-title">Prestige</h3>
+
+          <span class="icon-cross">
+            <img src="../../assets/images/cross.svg" class="img-fluid">
+          </span>
+        </a>
+      </div>
+      <!-- End Column 3 -->
+
+      <!-- Start Column 4 -->
+      <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+        <a class="product-item" href="cart.html">
+          <img src="https://file.aiquickdraw.com/imgcompressed/img/compressed_b513e3221054b3d4179868dcd6f4c311.webp" class="img-fluid product-thumbnail">
+          <h3 class="product-title">Imperial</h3>
+          <span class="icon-cross">
+            <img src="../../assets/images/cross.svg" class="img-fluid">
+          </span>
+        </a>
+      </div>
+      <!-- End Column 4 -->
+
+    </div>
+  </div>
+</div>
+<!-- End Product Section -->
+
+<!-- Start Why Choose Us Section -->
+<div class="why-choose-section">
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="col-lg-6">
+        <h2 class="section-title">Why Choose Us</h2>
+        <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet
+          dolor tempor tristique.</p>
+
+        <div class="row my-5">
+          <div class="col-6 col-md-6">
+            <div class="feature">
+              <div class="icon">
+                <img src="../../assets/images/truck.svg" alt="Image" class="imf-fluid">
+              </div>
+              <h3>Fast &amp; Free Shipping</h3>
+              <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-6">
+            <div class="feature">
+              <div class="icon">
+                <img src="../../assets/images/bag.svg" alt="Image" class="imf-fluid">
+              </div>
+              <h3>Easy to Shop</h3>
+              <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-6">
+            <div class="feature">
+              <div class="icon">
+                <img src="../../assets/images/support.svg" alt="Image" class="imf-fluid">
+              </div>
+              <h3>24/7 Support</h3>
+              <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-6">
+            <div class="feature">
+              <div class="icon">
+                <img src="../../assets/images/return.svg" alt="Image" class="imf-fluid">
+              </div>
+              <h3>Custom Made</h3>
+              <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="img-wrap">
+          <img src="https://images.pexels.com/photos/3865676/pexels-photo-3865676.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image" class="img-fluid">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- End Why Choose Us Section -->
+
+<!-- Start We Help Section -->
+<div class="we-help-section">
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="col-lg-7 mb-5 mb-lg-0">
+        <div class="imgs-grid">
+          <div class="grid grid-1"><img src="https://images.pexels.com/photos/12402360/pexels-photo-12402360.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load" alt="Untree.co"></div>
+          <div class="grid grid-2"><img src="https://images.pexels.com/photos/8166624/pexels-photo-8166624.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load" alt="Untree.co"></div>
+          <div class="grid grid-3"><img src="https://images.pexels.com/photos/15539702/pexels-photo-15539702/free-photo-of-perfume-and-vase-with-plant.png?auto=compress&cs=tinysrgb&w=800&lazy=load" alt="Untree.co"></div>
+        </div>
+      </div>
+      <div class="col-lg-5 ps-lg-5">
+        <h2 class="section-title mb-4">We Help You Make Modern Interior Design</h2>
+        <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac
+          aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique
+          senectus et netus et malesuada</p>
+
+        <ul class="list-unstyled custom-list my-4">
+          <li>Donec vitae odio quis nisl dapibus malesuada</li>
+          <li>Donec vitae odio quis nisl dapibus malesuada</li>
+          <li>Donec vitae odio quis nisl dapibus malesuada</li>
+          <li>Donec vitae odio quis nisl dapibus malesuada</li>
+        </ul>
+        <p><a herf="#" class="btn">Explore</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End We Help Section -->
+
+<!-- Start Popular Product -->
+<div class="popular-product">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+        <div class="product-item-sm d-flex">
+          <div class="thumbnail">
+            <img src="https://file.aiquickdraw.com/imgcompressed/img/compressed_b513e3221054b3d4179868dcd6f4c311.webp" alt="Image" class="img-fluid">
+          </div>
+          <div class="pt-3">
+            <h3>Sublime</h3>
+            <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio </p>
+            <p><a href="#">Read More</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+        <div class="product-item-sm d-flex">
+          <div class="thumbnail">
+            <img src="https://file.aiquickdraw.com/imgcompressed/img/compressed_b513e3221054b3d4179868dcd6f4c311.webp" alt="Image" class="img-fluid">
+          </div>
+          <div class="pt-3">
+            <h3>Prestige</h3>
+            <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio </p>
+            <p><a href="#">Read More</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+        <div class="product-item-sm d-flex">
+          <div class="thumbnail">
+            <img src="https://file.aiquickdraw.com/imgcompressed/img/compressed_b513e3221054b3d4179868dcd6f4c311.webp" alt="Image" class="img-fluid">
+          </div>
+          <div class="pt-3">
+            <h3>Imperial</h3>
+            <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio </p>
+            <p><a href="#">Read More</a></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- End Popular Product -->
+
+<!-- Start Testimonial Slider -->
+<app-testimonial></app-testimonial>
+<!-- End Testimonial Slider -->
+
+
+<app-footer></app-footer>
+
+<!-- <app-navbar></app-navbar>
 <div class="hero-section d-flex">
   <div class="overlay">
     <div class="content text-center" >
@@ -19,6 +252,4 @@
       </form>
     </div>
   </div>
-</div>
-<app-footer></app-footer>
-
+</div> -->

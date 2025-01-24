@@ -20,11 +20,4 @@ export class NavbarComponent {
     route(route: string) {
         this.router.navigate([route]);
     }
-    // toggleCart() {
-
-       
-    //     this.cartservuce.isCartOpen = !this.cartservuce.isCartOpen;
-    //     console.log('Cart toggled');
-
-    // }
 }

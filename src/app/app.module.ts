@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PageLoaderService } from '../shared/page-loader/page-loader.service';
 import { NavbarComponent } from "./home/navbar/navbar.component";
 import { FooterComponent } from "./home/footer/footer.component";
+import { TestimonialComponent } from "./testimonial/testimonial.component";
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FooterComponent } from "./home/footer/footer.component";
     // RouterModule.forChild(routes)
     ,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    TestimonialComponent
 ],
 
   providers: [ApiService, PageLoaderService],

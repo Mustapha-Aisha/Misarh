@@ -1,133 +1,396 @@
-<div class="container-fluid h-full position-relative" style="height: 700px;">
-    <!-- <video autoplay loop muted playsinline class="position-absolute w-100 h-100" style="object-fit: cover; z-index: 1;"> -->
-        <img src="https://videos.pexels.com/video-files/7303017/7303017-hd_1920_1080_30fps.mp4" />
-        Your browser does not support the video tag.
-    <!-- </video> -->
-
-    <div class="position-absolute w-100 h-100" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)); z-index: 2;"></div>
-
-    <div class="d-flex justify-content-center align-items-center position-relative" style="height: 100%; z-index: 3;">
-        <div class="text-center text-white px-4">
-            <span class="d-block h3 mb-4">Misarh</span>
-            <span class="d-block display-4 font-weight-bold mb-5" style="font-size: 100px; text-transform: uppercase;">Unveil Your Personal Aromatic Signature</span>
-
-            <p class="font-weight-bold mt-5" style="font-size: 1.2rem;">Perfume that’s smarter than your average scent. Lorem ipsum dolor sit amet, consectetur.</p>
-            <a href="#" class="btn btn-light py-3 px-5 text-center mb-4 text-xl font-weight-medium border-0 rounded-pill">Get Started</a>
+<app-navbar></app-navbar>
+<!-- Start Hero Section -->
+<div class="hero">
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="col-lg-5">
+        <div class="intro-excerpt">
+          <h1>Unveil Your <span class="d-block">Signature Scent</span></h1>
+          <p class="mb-4">A fragrance is your invisible signature. Describe your dream scent below, and let us craft it
+            for you.</p>
+          <!-- <form (ngSubmit)="onSubmit()" class="form">
+            <input type="text" class="form-control custom-input"
+              placeholder="Describe your scent... (e.g., sensual, spicy, with a woody undertone)"
+              [(ngModel)]="formData.scentDescription" name="scentDescription" required />
+            <button class="btn btn-white-outline custom-button" type="submit">Discover My Scent</button>
+          </form> -->
         </div>
-    </div>
-</div>
-
-<div class="container py-5 d-flex">
-    <div class="col-md-6 d-flex flex-column justify-content-start align-items-start mb-5">
-        <h2 class="text-muted fw-semibold mb-3">Dare to be different</h2>
-        <h1 class="fs-1 fw-bold lh-sm mb-3">
-            Fragrance that
-            <span class="text-danger fst-italic">pushes the boundaries of possibility.</span>
-            Lorem ipsum dolor sit amet,
-            <span class="text-danger fst-italic">consectetur adipiscing elit.</span>
-        </h1>
-    </div>
-
-    <div class="col-md-6 d-flex flex-column justify-content-end align-items-end">
-        <div class="d-flex justify-content-between w-75">
-            <div class="text-center">
-                <h5 class="text-muted mb-2">Years Experience</h5>
-                <h1 class="display-6 fw-bold mb-0">25+</h1>
-            </div>
-            <div class="text-center">
-                <h5 class="text-muted mb-2">Professional Staff</h5>
-                <h1 class="display-6 fw-bold mb-0">140+</h1>
-            </div>
-            <div class="text-center">
-                <h5 class="text-muted mb-2">Positive Reviews</h5>
-                <h1 class="display-6 fw-bold mb-0">99%</h1>
-            </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="hero-img-wrap">
+          <img src="../../assets/images/perfume-bottle.png" class="img-fluid hero-img" alt="Image">
         </div>
+      </div>
     </div>
+  </div>
 </div>
+<!-- End Hero Section -->
 
-<div class="container p-5 w-100" style="background-color: #f8f8f8; border-top: 2px solid #004D40;">
-    <h2 class="fw-bold text-center" style="font-size: 2.4rem; color: #004D40;">Brand Overview</h2>
-    <p class="mt-3 mx-auto text-center" style="color: #666; max-width: 600px; font-size: 1rem; font-style: italic;">
-        Veera is a luxury fragrance brand dedicated to creating bespoke perfumes that reflect your unique personality.
-        Our expert perfumers use the finest ingredients to craft scents that are as individual as you are.
-        Whether you prefer floral, woody, or oriental notes, we have something for everyone.
-        Experience the art of personalized fragrance with Veera.
-    </p>
+<!-- Start Product Section -->
+<div class="product-section">
+  <div class="container">
+    <div class="row">
+
+      <!-- Start Column 1 -->
+      <div class="col-md-12 col-lg-3 mb-5 mb-lg-0">
+        <h2 class="mb-4 section-title">Crafted with excellent material.</h2>
+        <p class="mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit
+          imperdiet dolor tempor tristique. </p>
+        <p><a href="shop.html" class="btn">Explore</a></p>
+      </div>
+      <!-- End Column 1 -->
+
+      <!-- Start Column 2 -->
+      <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+        <a class="product-item" href="cart.html">
+          <img src="https://file.aiquickdraw.com/imgcompressed/img/compressed_b513e3221054b3d4179868dcd6f4c311.webp" class="img-fluid product-thumbnail">
+          <h3 class="product-title">Nordic Chair</h3>
+          <strong class="product-price">$50.00</strong>
+
+          <span class="icon-cross">
+            <img src="https://file.aiquickdraw.com/imgcompressed/img/compressed_b513e3221054b3d4179868dcd6f4c311.webp/cross.svg" class="img-fluid">
+          </span>
+        </a>
+      </div>
+      <!-- End Column 2 -->
+
+      <!-- Start Column 3 -->
+      <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+        <a class="product-item" href="cart.html">
+          <img src="https://file.aiquickdraw.com/imgcompressed/img/compressed_b513e3221054b3d4179868dcd6f4c311.webp" class="img-fluid product-thumbnail">
+          <h3 class="product-title">Kruzo Aero Chair</h3>
+          <strong class="product-price">$78.00</strong>
+
+          <span class="icon-cross">
+            <img src="../../assets/images/cross.svg" class="img-fluid">
+          </span>
+        </a>
+      </div>
+      <!-- End Column 3 -->
+
+      <!-- Start Column 4 -->
+      <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+        <a class="product-item" href="cart.html">
+          <img src="https://file.aiquickdraw.com/imgcompressed/img/compressed_b513e3221054b3d4179868dcd6f4c311.webp" class="img-fluid product-thumbnail">
+          <h3 class="product-title">Ergonomic Chair</h3>
+          <strong class="product-price">$43.00</strong>
+
+          <span class="icon-cross">
+            <img src="../../assets/images/cross.svg" class="img-fluid">
+          </span>
+        </a>
+      </div>
+      <!-- End Column 4 -->
+
+    </div>
+  </div>
 </div>
+<!-- End Product Section -->
 
-<div class="container py-5">
-    <div class="row align-items-center">
-        <div class="col-lg-6 position-relative">
-            <img src="https://images.pexels.com/photos/6694130/pexels-photo-6694130.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load" alt="Background" class="img-fluid w-100">
-            <div class="position-absolute top-50 start-50 translate-middle" style="width: 70%; max-width: 100%; object-fit: cover;">
-                <img src="https://images.pexels.com/photos/8450221/pexels-photo-8450221.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load" alt="Perfume Bottle" class="img-fluid rounded shadow">
+<!-- Start Why Choose Us Section -->
+<div class="why-choose-section">
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="col-lg-6">
+        <h2 class="section-title">Why Choose Us</h2>
+        <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet
+          dolor tempor tristique.</p>
+
+        <div class="row my-5">
+          <div class="col-6 col-md-6">
+            <div class="feature">
+              <div class="icon">
+                <img src="../../assets/images/truck.svg" alt="Image" class="imf-fluid">
+              </div>
+              <h3>Fast &amp; Free Shipping</h3>
+              <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
             </div>
+          </div>
+
+          <div class="col-6 col-md-6">
+            <div class="feature">
+              <div class="icon">
+                <img src="../../assets/images/bag.svg" alt="Image" class="imf-fluid">
+              </div>
+              <h3>Easy to Shop</h3>
+              <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-6">
+            <div class="feature">
+              <div class="icon">
+                <img src="../../assets/images/support.svg" alt="Image" class="imf-fluid">
+              </div>
+              <h3>24/7 Support</h3>
+              <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-6">
+            <div class="feature">
+              <div class="icon">
+                <img src="../../assets/images/return.svg" alt="Image" class="imf-fluid">
+              </div>
+              <h3>Hassle Free Returns</h3>
+              <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+            </div>
+          </div>
+
         </div>
+      </div>
 
-        <div class="col-lg-6 text-center text-lg-start mt-4 mt-lg-0">
-            <h6 class="text-uppercase text-muted mb-2">About Aurra</h6>
-            <h1 class="display-5 fw-bold mb-3">
-                The Scent That <span class="text-danger fst-italic">Lingers</span>, the Memory That <span class="text-danger fst-italic">Lasts</span>
-            </h1>
-            <p class="text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla arcu tortor, elementum euismod enim id, finibus fermentum sem. Duis leo mauris, pharetra ac vulputate.</p>
-            <a href="#" class="btn btn-danger btn-lg">Learn More</a>
+      <div class="col-lg-5">
+        <div class="img-wrap">
+          <img src="https://images.pexels.com/photos/3865676/pexels-photo-3865676.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image" class="img-fluid">
+          <!-- <img src="../../assets/images/why-choose-us-img.jpg" alt="Image" class="img-fluid"> -->
         </div>
+      </div>
+
     </div>
+  </div>
 </div>
+<!-- End Why Choose Us Section -->
 
-<div class="container text-center py-5">
-    <h2 class="display-4 fw-bold" style="font-size: 3rem; color: #004D40;">The Art of Gifting</h2>
-    <p class="mt-3 mx-auto" style="color: #666; max-width: 600px; display: block; line-height: 1.8; font-size: 1.1rem; font-style: italic;">
-        Ribbons, bows, tissue paper, and thoughtful touches. At Dior, each gift is meticulously crafted into an extraordinary experience. Inside every Dior gift box, the essence of our ateliers at 30 Avenue Montaigne is brought to life, making each present truly exceptional.
-    </p>
+<!-- Start We Help Section -->
+<div class="we-help-section">
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="col-lg-7 mb-5 mb-lg-0">
+        <div class="imgs-grid">
+          <div class="grid grid-1"><img src="https://images.pexels.com/photos/12402360/pexels-photo-12402360.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load" alt="Untree.co"></div>
+          <div class="grid grid-2"><img src="https://images.pexels.com/photos/8166624/pexels-photo-8166624.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load" alt="Untree.co"></div>
+          <div class="grid grid-3"><img src="https://images.pexels.com/photos/15539702/pexels-photo-15539702/free-photo-of-perfume-and-vase-with-plant.png?auto=compress&cs=tinysrgb&w=800&lazy=load" alt="Untree.co"></div>
+        </div>
+      </div>
+      <div class="col-lg-5 ps-lg-5">
+        <h2 class="section-title mb-4">We Help You Make Modern Interior Design</h2>
+        <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac
+          aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique
+          senectus et netus et malesuada</p>
+
+        <ul class="list-unstyled custom-list my-4">
+          <li>Donec vitae odio quis nisl dapibus malesuada</li>
+          <li>Donec vitae odio quis nisl dapibus malesuada</li>
+          <li>Donec vitae odio quis nisl dapibus malesuada</li>
+          <li>Donec vitae odio quis nisl dapibus malesuada</li>
+        </ul>
+        <p><a herf="#" class="btn">Explore</a></p>
+      </div>
+    </div>
+  </div>
 </div>
+<!-- End We Help Section -->
 
-<div class="container py-5">
-    <div class="text-center mb-4">
-        <h2 class="fw-bold" style="font-size: 2.4rem; letter-spacing: 0.5px; color: #004D40;">Best Sellers</h2>
-        <p class="mt-3 mx-auto" style="color: #666; max-width: 600px; line-height: 1.8; font-size: 1rem; font-style: italic;">
-            Discover the fragrances loved by our customers and crafted to perfection. Shop the best sellers today.
-        </p>
+<!-- Start Popular Product -->
+<div class="popular-product">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+        <div class="product-item-sm d-flex">
+          <div class="thumbnail">
+            <img src="https://file.aiquickdraw.com/imgcompressed/img/compressed_b513e3221054b3d4179868dcd6f4c311.webp" alt="Image" class="img-fluid">
+          </div>
+          <div class="pt-3">
+            <h3>Nordic Chair</h3>
+            <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio </p>
+            <p><a href="#">Read More</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+        <div class="product-item-sm d-flex">
+          <div class="thumbnail">
+            <img src="https://file.aiquickdraw.com/imgcompressed/img/compressed_b513e3221054b3d4179868dcd6f4c311.webp" alt="Image" class="img-fluid">
+          </div>
+          <div class="pt-3">
+            <h3>Kruzo Aero Chair</h3>
+            <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio </p>
+            <p><a href="#">Read More</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+        <div class="product-item-sm d-flex">
+          <div class="thumbnail">
+            <img src="https://file.aiquickdraw.com/imgcompressed/img/compressed_b513e3221054b3d4179868dcd6f4c311.webp" alt="Image" class="img-fluid">
+          </div>
+          <div class="pt-3">
+            <h3>Ergonomic Chair</h3>
+            <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio </p>
+            <p><a href="#">Read More</a></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- End Popular Product -->
+
+<!-- Start Testimonial Slider -->
+<div class="testimonial-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7 mx-auto text-center">
+        <h2 class="section-title">Testimonials</h2>
+      </div>
     </div>
 
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-        <div *ngFor="let product of products" class="col">
-            <div class="card border-0 shadow-lg rounded-3">
-                <img [src]="product.image" class="card-img-top" alt="Product Image" style="height: 300px; object-fit: cover;">
-                <div class="card-body text-center">
-                    <h5 class="card-title">{{ product.name }}</h5>
-                    <p class="card-text">{{ product.description }}</p>
-                    <a href="#" class="btn btn-primary py-2 px-4 rounded-pill">Shop Now</a>
+    <div class="row justify-content-center">
+      <div class="col-lg-12">
+        <div class="testimonial-slider-wrap text-center">
+
+          <div id="testimonial-nav">
+            <span class="prev" data-controls="prev"><span class="fa fa-chevron-left"></span></span>
+            <span class="next" data-controls="next"><span class="fa fa-chevron-right"></span></span>
+          </div>
+
+          <div class="testimonial-slider">
+
+            <div class="item">
+              <div class="row justify-content-center">
+                <div class="col-lg-8 mx-auto">
+
+                  <div class="testimonial-block text-center">
+                    <blockquote class="mb-5">
+                      <p>&ldquo;Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus
+                        malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        Integer convallis volutpat dui quis scelerisque.&rdquo;</p>
+                    </blockquote>
+
+                    <div class="author-info">
+                      <div class="author-pic">
+                        <img src="images/person-1.png" alt="Maria Jones" class="img-fluid">
+                      </div>
+                      <h3 class="font-weight-bold">Maria Jones</h3>
+                      <span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
+                    </div>
+                  </div>
+
                 </div>
+              </div>
             </div>
-        </div>
-    </div>
-</div>
+            <!-- END item -->
 
-<div class="container py-5">
-    <div class="text-center mb-4">
-        <h2 class="fw-bold" style="font-size: 2.4rem; color: #004D40;">What Our Customers Are Saying</h2>
-        <p class="mt-3 mx-auto" style="color: #666; max-width: 600px; line-height: 1.8; font-size: 1rem; font-style: italic;">
-            Don’t just take our word for it – hear from our delighted customers about their experiences with our luxurious scents.
-        </p>
-    </div>
+            <div class="item">
+              <div class="row justify-content-center">
+                <div class="col-lg-8 mx-auto">
 
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div *ngFor="let testimonial of testimonials" class="col">
-            <div class="card testimonial-card border-0 shadow-lg rounded-3">
-                <div class="card-body text-center">
-                    <p class="card-text" style="font-size: 1.2rem; color: #333; font-style: italic;">
-                        {{ testimonial.text }}
-                    </p>
-                    <h5 class="card-title mt-3" style="font-size: 1.5rem; color: #004D40;">
-                        {{ testimonial.name }}
-                    </h5>
-                    <p class="card-subtitle text-muted">{{ testimonial.role }}</p>
+                  <div class="testimonial-block text-center">
+                    <blockquote class="mb-5">
+                      <p>&ldquo;Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus
+                        malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        Integer convallis volutpat dui quis scelerisque.&rdquo;</p>
+                    </blockquote>
+
+                    <div class="author-info">
+                      <div class="author-pic">
+                        <img src="images/person-1.png" alt="Maria Jones" class="img-fluid">
+                      </div>
+                      <h3 class="font-weight-bold">Maria Jones</h3>
+                      <span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
+                    </div>
+                  </div>
+
                 </div>
+              </div>
             </div>
+            <!-- END item -->
+
+            <div class="item">
+              <div class="row justify-content-center">
+                <div class="col-lg-8 mx-auto">
+
+                  <div class="testimonial-block text-center">
+                    <blockquote class="mb-5">
+                      <p>&ldquo;Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus
+                        malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        Integer convallis volutpat dui quis scelerisque.&rdquo;</p>
+                    </blockquote>
+
+                    <div class="author-info">
+                      <div class="author-pic">
+                        <img src="images/person-1.png" alt="Maria Jones" class="img-fluid">
+                      </div>
+                      <h3 class="font-weight-bold">Maria Jones</h3>
+                      <span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <!-- END item -->
+
+          </div>
+
         </div>
+      </div>
     </div>
+  </div>
 </div>
+<!-- End Testimonial Slider -->
+
+<!-- Start Blog Section -->
+<div class="blog-section">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-md-6">
+        <h2 class="section-title">Recent Blog</h2>
+      </div>
+      <div class="col-md-6 text-start text-md-end">
+        <a href="#" class="more">View All Posts</a>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
+        <div class="post-entry">
+          <a href="#" class="post-thumbnail"><img src="images/post-1.jpg" alt="Image" class="img-fluid"></a>
+          <div class="post-content-entry">
+            <h3><a href="#">First Time Home Owner Ideas</a></h3>
+            <div class="meta">
+              <span>by <a href="#">Kristin Watson</a></span> <span>on <a href="#">Dec 19, 2021</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
+        <div class="post-entry">
+          <a href="#" class="post-thumbnail"><img src="images/post-2.jpg" alt="Image" class="img-fluid"></a>
+          <div class="post-content-entry">
+            <h3><a href="#">How To Keep Your Furniture Clean</a></h3>
+            <div class="meta">
+              <span>by <a href="#">Robert Fox</a></span> <span>on <a href="#">Dec 15, 2021</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
+        <div class="post-entry">
+          <a href="#" class="post-thumbnail"><img src="images/post-3.jpg" alt="Image" class="img-fluid"></a>
+          <div class="post-content-entry">
+            <h3><a href="#">Small Space Furniture Apartment Ideas</a></h3>
+            <div class="meta">
+              <span>by <a href="#">Kristin Watson</a></span> <span>on <a href="#">Dec 12, 2021</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- End Blog Section -->
 
 <app-footer></app-footer>

@@ -29,8 +29,10 @@
     "angular-paystack": "^1.0.0",
     "boostrap": "^2.0.0",
     "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
     "rxjs": "~7.8.0",
     "socket.io-client": "^4.8.1",
+    "tiny-slider": "^2.9.4",
     "tslib": "^2.8.1",
     "zone.js": "~0.15.0"
   },

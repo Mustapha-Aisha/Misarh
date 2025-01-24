@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "idqr-portal-18": {
+    "Misarh": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/idqr-portal-18",
+            "outputPath": "dist/misarh",  
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -26,6 +26,7 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
+              "src/assets",
               {
                 "glob": "**/*",
                 "input": "public"
@@ -33,7 +34,8 @@
             ],
             "styles": [
               "src/styles.scss",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+               "node_modules/tiny-slider/dist/tiny-slider.css"
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
@@ -67,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "idqr-portal-18:build:production"
+              "buildTarget": "Misarh:build:production"  
             },
             "development": {
-              "buildTarget": "idqr-portal-18:build:development"
+              "buildTarget": "Misarh:build:development" 
             }
           },
           "defaultConfiguration": "development"
@@ -88,6 +90,7 @@
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
+              "src/assets",
               {
                 "glob": "**/*",
                 "input": "public"

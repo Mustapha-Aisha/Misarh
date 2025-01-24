@@ -6,14 +6,18 @@ import { Router } from '@angular/router';
 // import { Category, ProductEntity, Variation } from '../products/product.module
 import { ApiService } from '../api.service';
 import { Category, ProductEntity, Variation } from '../products/product.module';
+import { NavbarComponent } from "../home/navbar/navbar.component";
+import { FooterComponent } from "../home/footer/footer.component";
 
 
 @Component({
     selector: 'app-product-details',
     imports: [
-        FormsModule,
-        CommonModule
-    ],
+    FormsModule,
+    CommonModule,
+    NavbarComponent,
+    FooterComponent
+],
     standalone: true,
     templateUrl: './product-details.component.html',
     styleUrls: ['./product-details.component.scss']
