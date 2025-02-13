@@ -11,6 +11,7 @@ import {  OrderHistoryComponent } from './order-history/order-history.component'
 import { ManageFragranceComponent } from './manage-fragrance/manage-fragrance.component';
 import { PersonalDetailsComponent } from './personal-details/personal-details.component';
 import { FilterComponent } from '../filter/filter.component';
+import { OrderSummaryComponent } from './cart/checkout/checkout.component';
 
 
 export const routes: Routes = [
@@ -26,6 +27,7 @@ export const routes: Routes = [
   { path: 'manage-fragrance', component: ManageFragranceComponent },
   { path: 'personal-details', component: PersonalDetailsComponent },
   { path: 'filter', component: FilterComponent },
+  { path: 'checkout', component: OrderSummaryComponent },
   { path: '**', redirectTo: 'home' }
 ];
 

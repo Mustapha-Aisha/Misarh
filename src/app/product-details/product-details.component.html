@@ -1,3 +1,113 @@
+<!-- <app-navbar></app-navbar>
+<div class="product-container">
+  <div class="product-image">
+    <img [src]="product.image_url || 'default-image-path.jpg'" alt="Image of {{ product.name }}" />
+  </div>
+  
+  <div class="product-details">
+    <h1>{{ product.name }}</h1>
+    <p class="price">Price: {{ price.toFixed(2) }}</p>
+    <p class="scent-description"><strong>Scent Description:</strong> {{ product.scentDescription }}</p>
+    
+
+    <div class="scent-story">
+      <h3>The Scent Story</h3>
+      <p>{{ product.scentStory || 'A fresh scent inspired by the tranquil feeling of rain, capturing the essence of nature’s rejuvenation.' }}</p>
+    </div>
+    
+
+         <div class="scent-composition">
+      <h3>Scent Composition</h3>
+      <div class="notes-grid">
+        <div class="note">
+          <h4>Top Notes</h4>
+          <ul>
+            <li *ngFor="let note of product.scentNotes.Top">{{ note }}</li>
+          </ul>
+        </div>
+        <div class="note">
+          <h4>Middle Notes</h4>
+          <ul>
+            <li *ngFor="let note of product.scentNotes?.Middle">{{ note }}</li>
+          </ul>
+        </div>
+        <div class="note">
+          <h4>Base Notes</h4>
+          <ul>
+            <li *ngFor="let note of product.scentNotes?.Base">{{ note }}</li>
+          </ul>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Mix Details (The ingredients behind the fragrance) -->
+    <!-- <div class="mix-details">
+      <h3>Crafted With</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Oil</th>
+            <th>Percentage</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let mix of product.mixDetails">
+            <td>{{ mix.Oil }}</td>
+            <td>{{ mix.Percentage }}</td>
+            <td>{{ mix.Notes }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div> -->
+
+    <!-- Scent Profile -->
+    <!-- <div class="scent-profile">
+      <h3>Scent Profile</h3>
+      <p>{{ product.resultingScentProfile || 'A unique blend of woody, floral, and green elements, designed to evoke the sensation of a rain-washed garden.' }}</p>
+    </div> -->
+
+    <!-- Category and Variation Selection -->
+    <!-- <div class="category-variation">
+      <div class="form-group">
+        <label for="category">Category:</label>
+        <select id="category" [(ngModel)]="selectedCategory" (ngModelChange)="calculatePriceofPerfume()">
+          <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="variation">Variation (Size):</label>
+        <select id="variation" [(ngModel)]="selectedVariation" (ngModelChange)="calculatePriceofPerfume()">
+          <option *ngFor="let variation of variations" [value]="variation">{{ variation }}</option>
+        </select>
+      </div>
+    </div>
+
+    <button type="submit" (click)="addToCart()" class="btn-add-to-cart" [disabled]="!selectedCategory || !selectedVariation || selectedCategory === 'DEFAULT'">
+      Add to Cart
+    </button> -->
+
+    <!-- Recommended Pairings -->
+    <!-- <div *ngIf="product.otherCombinations?.length" class="recommended-pairings">
+      <h4>Recommended Pairings:</h4>
+      <ul>
+        <li *ngFor="let combination of product.otherCombinations" (click)="switchToCombination(combination)">
+          {{ combination }}
+        </li>
+      </ul>
+    </div> -->
+
+    <!-- Back to Original Product Button -->
+    <!-- <button *ngIf="originalProduct && product.name !== originalProduct.name" (click)="switchToCombination(originalProduct)">
+      Back to Original Product
+    </button>
+  </div>
+</div>
+<app-footer></app-footer> -->
+
+
+
 <app-navbar></app-navbar>
 <div class="product-container">
   <div class="product-image">

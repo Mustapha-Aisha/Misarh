@@ -8,6 +8,7 @@ import { ApiService } from '../api.service';
 import { Category, ProductEntity, Variation } from '../products/product.module';
 import { NavbarComponent } from "../home/navbar/navbar.component";
 import { FooterComponent } from "../home/footer/footer.component";
+import { CartService } from '../cart/cartService/cart.service';
 
 
 @Component({
@@ -41,8 +42,13 @@ export class ProductDetailsComponent implements OnInit {
     categoryId: Category.DEFAULT,
     customerId: '',
     variation: Variation["15ml"],
-    scentNotes: [],
-    otherCombinations: []
+    scentNotes: {
+      Top: '',
+      Middle: '',
+      Base:''
+    },
+    otherCombinations: [],
+    scentStory: []
   };
 
   products: string | null = localStorage.getItem("generated-product");
@@ -50,7 +56,8 @@ export class ProductDetailsComponent implements OnInit {
 
   constructor(
     private apiService: ApiService,
-    private router: Router
+    private router: Router,
+    private cartService: CartService
   ) {}
 
   ngOnInit(): void {
@@ -161,19 +168,7 @@ export class ProductDetailsComponent implements OnInit {
     this.apiService.updateProduct(this.product.id, this.product).subscribe({
       next: (updateRes: any) => {
       if(updateRes.status_code !== 200) return console.error('Failed to update product:', updateRes.message);
-        this.apiService.addToCart(payload).subscribe({
-          next: (cartRes: { status_code: number; message: any; }) => {
-            if (cartRes.status_code === 200) {
-              console.log('Item added to cart successfully:', cartRes);
-              this.router.navigate(['/cart']);
-            } else {
-              console.error('Failed to add item to cart:', cartRes.message);
-            }
-          },
-          error: (cartErr: any) => {
-            console.error('Error adding item to cart:', cartErr);
-          },
-        });
+        this.cartService.addToCart(payload);
       },
       error: (updateErr: any) => {
         console.error('Error updating product:', updateErr);

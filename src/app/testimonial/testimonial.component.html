@@ -9,8 +9,6 @@
     <div class="row justify-content-center">
       <div class="col-lg-12">
         <div class="testimonial-slider-wrap text-center">
-
-          <!-- Navigation Arrows -->
           <div id="testimonial-nav">
             <span class="prev" data-controls="prev">
               <span class="fa fa-chevron-left"></span>
@@ -19,8 +17,6 @@
               <span class="fa fa-chevron-right"></span>
             </span>
           </div>
-
-          <!-- Slider Items -->
           <div class="testimonial-slider">
             <div class="item" *ngFor="let testimonial of testimonials">
               <div class="row justify-content-center">
@@ -31,15 +27,21 @@
                     </blockquote>
                     <div class="author-info">
                       <div class="author-pic">
-                        <img [src]="testimonial.image" [alt]="testimonial.name" class="img-fluid">
+                        <img
+                          [src]="testimonial.image"
+                          [alt]="testimonial.name"
+                          class="img-fluid"
+                        />
                       </div>
                       <h3 class="font-weight-bold">{{ testimonial.name }}</h3>
-                      <span class="position d-block mb-3">{{ testimonial.position }}</span>
+                      <span class="position d-block mb-3">
+                        {{ testimonial.position }}
+                      </span>
                     </div>
                   </div>
                 </div>
               </div>
-            </div> 
+            </div>
           </div>
         </div> 
       </div>

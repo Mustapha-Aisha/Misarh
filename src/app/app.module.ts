@@ -13,7 +13,7 @@ import { PageLoaderService } from '../shared/page-loader/page-loader.service';
 import { NavbarComponent } from "./home/navbar/navbar.component";
 import { FooterComponent } from "./home/footer/footer.component";
 import { TestimonialComponent } from "./testimonial/testimonial.component";
-
+import { CartService } from './cart/cartService/cart.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +33,7 @@ import { TestimonialComponent } from "./testimonial/testimonial.component";
     TestimonialComponent
 ],
 
-  providers: [ApiService, PageLoaderService],
+  providers: [ApiService, PageLoaderService, CartService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

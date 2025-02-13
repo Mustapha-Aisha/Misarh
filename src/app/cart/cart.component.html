@@ -56,11 +56,8 @@
       <p>Shipping: ${{ shipping }}</p>
       <p>Total: ${{ calculateTotal() }}</p>
     </div>
-    <button class="checkout-btn" (click)="checkout()">Proceed to Checkout</button>
+    <button class="checkout-btn" (click)="moveToCheckout()">Proceed to Checkout</button>
   </div>
 </div>
 
-<!-- Floating Cart Icon -->
-<div class="cart-icon" (click)="toggleCart()">
-  🛒
-</div>
+

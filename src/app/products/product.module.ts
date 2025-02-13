@@ -37,8 +37,13 @@ export interface ProductEntity {
   discount?: string;
   notes?: string;
   variation: Variation;
-  scentNotes: string[];
+  scentNotes: {
+    Top: string;
+    Middle: string;
+    Base: string;
+  };
   otherCombinations: string[];
+  scentStory: string[];
 }
 
 export interface CartItem {

@@ -6,6 +6,7 @@ import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 import { ApiService } from '../api.service';
 import { CartItem } from '../products/product.module';
 import { io } from 'socket.io-client';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -31,7 +32,7 @@ export class CartComponent implements OnInit {
   shipping: number = 15; // Fixed shipping cost for now
 
 
-  constructor(private apiService: ApiService, private fb: FormBuilder) {
+  constructor(private apiService: ApiService, private fb: FormBuilder, private router: Router) {
   this.shippingForm = this.fb.group({
     address: ['', Validators.required],
     city: ['', Validators.required],
@@ -67,14 +68,14 @@ export class CartComponent implements OnInit {
   }
 
   calculateTotal(): string{
-    const total = (Number(this.calculateSubtotal()) + this.shipping + this.calculateTax()).toFixed(0);
+    const total = (Number(this.calculateSubtotal()) + this.shipping ).toFixed(0);
     return total.toString();
   }
 
-  calculateTax(): number {
-    const taxRate = 0; 
-    return Number(this.calculateSubtotal()) * taxRate;
-  }
+  // calculateTax(): number {
+  //   const taxRate = 0; 
+  //   return Number(this.calculateSubtotal()) * taxRate;
+  // }
 
   calculateDiscountedPrice(price: string, discount?: string): number {
     const numericPrice = parseFloat(price); // Convert string to number
@@ -118,23 +119,11 @@ export class CartComponent implements OnInit {
       console.error('Error adding item to cart:', err);
     }
     })
+  } 
+  moveToCheckout(){
+    this.router.navigate(['/checkout']);
   }
-
-  checkout(){
-    const total = this.calculateTotal()
-
-    this.apiService.checkoutCart(total).subscribe({
-      next: (res) => {
-        const paymentUrl = res.data.paymentUrl;
-        window.open(paymentUrl, '_blank');
-        console.log("Checkout Successful")
-      },
-      error: (err) =>{
-        console.error('Failed to initiate checkout:', err);
-      }
-    })
-
-  }
+  
 
   toggleCart() {
     this.isCartOpen = !this.isCartOpen;
