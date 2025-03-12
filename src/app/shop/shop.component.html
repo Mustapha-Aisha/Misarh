@@ -1,0 +1,46 @@
+<app-navbar></app-navbar>
+<div class="container py-5">
+  <!-- Header -->
+  <div class="text-center mb-5" @fadeInUp>
+    <h1 class="display-5 fw-bold font-serif mb-3">Our Collection</h1>
+    <p class="text-muted mx-auto" style="max-width: 600px;">
+      Discover our curated collection of signature scents, or create your own
+      unique fragrance with our AI-powered perfume creator.
+    </p>
+  </div>
+
+  <!-- Create Custom Scent Banner -->
+  <div class="bg-dark text-white rounded p-4 p-md-5 d-flex flex-column flex-md-row align-items-center justify-content-between mb-5" @fadeInScale>
+    <div class="mb-3 mb-md-0">
+      <h2 class="h4 fw-bold mb-1">Create Your Signature Scent</h2>
+      <p class="text-light">Let our AI help you discover your perfect fragrance</p>
+    </div>
+    <button class="btn btn-light text-dark px-4 py-2 rounded-pill">
+      Start Creating
+      <i class="bi bi-arrow-right ms-2"></i>
+    </button>
+  </div>
+
+  <!-- Product Grid -->
+  <div class="row g-4">
+    <div *ngFor="let product of products; let i = index" class="col-12 col-md-6 col-lg-3" @fadeInUp>
+      <div class="card border-0 shadow-sm">
+        <div class="position-relative">
+          <img [src]="product.image" [alt]="product.name" class="card-img-top rounded">
+          <button class="btn btn-light position-absolute top-0 end-0 m-2 p-2 rounded-circle opacity-0 hover-opacity">
+            <i class="bi bi-heart-fill"></i>
+          </button>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title fw-bold">{{ product.name }}</h5>
+          <p class="text-muted small">{{ product.description }}</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="fw-bold fs-5">${{ product.price }}</span>
+            <button class="btn btn-dark px-3 rounded-pill">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

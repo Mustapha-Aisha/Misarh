@@ -9,7 +9,7 @@ import { Data } from '@angular/router';
 export class ApiService {
   constructor(private http: HttpClient) {}
   
-  //Create product API
+  //Create product API (P.S data is expected to be an object)
   createProduct(data: any): Observable<any> {
     const token = localStorage.getItem("customer"); 
     const headers = new HttpHeaders({

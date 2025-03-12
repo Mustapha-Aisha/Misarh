@@ -16,12 +16,10 @@ export class PageLoaderComponent implements OnInit {
     public loaderService: PageLoaderService,
     public componentElement: ElementRef,
     @Inject(DOCUMENT) private document: Document
-  ) {
-  }
-
+  ) {}
   ngOnInit(): void {
 
-    this.loaderService.nativeElement = this.componentElement.nativeElement;
+    // this.loaderService.nativeElement = this.componentElement.nativeElement;
 
     // reposition page loader
     const pageLoader = this.componentElement.nativeElement.querySelector("div");
@@ -33,9 +31,4 @@ export class PageLoaderComponent implements OnInit {
     });
 
   }
-
-  get() {
-    // 
-  }
-
 }

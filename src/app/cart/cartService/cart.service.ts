@@ -1,12 +1,23 @@
 import { Injectable } from '@angular/core';
 import { ApiService } from '../../api.service';
 import { CartItem } from '../../products/product.module';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable()
 export class CartService {
+    private isCartOpen$ = new BehaviorSubject<boolean>(false); // Observable to track cart state
+
     cartItems: CartItem[] = [];
     shipping = 0; // Fixed shipping cost for now
     constructor(private apiService: ApiService) { }
+
+    toggleCart() {
+        this.isCartOpen$.next(!this.isCartOpen$.value);
+    }
+
+    getCartStatus() {
+        return this.isCartOpen$.asObservable();
+      }
 
     calculateSubtotal(): string {
         const subtotal = (this.cartItems.reduce((total, item) => total + Number(item.product.price) * item.quantity, 0)).toFixed(0);

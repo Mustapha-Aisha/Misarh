@@ -12,6 +12,8 @@ import { ManageFragranceComponent } from './manage-fragrance/manage-fragrance.co
 import { PersonalDetailsComponent } from './personal-details/personal-details.component';
 import { FilterComponent } from '../filter/filter.component';
 import { OrderSummaryComponent } from './cart/checkout/checkout.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { ShopComponent } from './shop/shop.component';
 
 
 export const routes: Routes = [
@@ -28,7 +30,15 @@ export const routes: Routes = [
   { path: 'personal-details', component: PersonalDetailsComponent },
   { path: 'filter', component: FilterComponent },
   { path: 'checkout', component: OrderSummaryComponent },
-  { path: '**', redirectTo: 'home' }
+  { path: 'contact-us', component: ContactUsComponent },
+  { path: 'shop', component: ShopComponent },
+  
+  {
+    path: 'id-card',
+    loadChildren: () =>
+      import('./features/id-card/id-card.module').then((m) => m.IdCardModule),
+  },
+  { path: '**', redirectTo: 'home' },
 ];
 
 

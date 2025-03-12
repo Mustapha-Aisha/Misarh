@@ -1,95 +1,182 @@
 <app-navbar></app-navbar>
-<!-- Start Hero Section -->
-<div class="hero">
-  <div class="container">
-    <div class="row justify-content-between">
-      <div class="col-lg-5">
-        <div class="content intro-excerpt">
-          <h1 class="hero-title">Unveil Your <span class="d-block">Signature Scent</span></h1>
-          <p class="mb-4">A fragrance is your invisible signature. Describe your dream scent below, and let us craft it
-            for you.</p>
-          <form (ngSubmit)="onSubmit()" class="form">
-            <input type="text" class="form-control custom-input"
-              placeholder="Describe your scent... (e.g., sensual, spicy, with a woody undertone)"
-              [(ngModel)]="formData.scentDescription" name="scentDescription" required />
-            <button class="btn btn-white-outline custom-button" type="submit">Discover My Scent</button>
-          </form>
-        </div>
+<!-- Hero Section -->
+<section class="relative">
+  <div class="absolute inset-0">
+    <div class="relative h-full">
+      <div class="absolute inset-0 z-10">
+        <img src="../../assets/images/background-green.png" alt="Luxury Perfume" class="w-full h-full object-cover opacity-20" />
       </div>
-      <div class="col-lg-7">
-        <div class="hero-img-wrap ">
-          <img src="../../assets/images/perfume-bottle.png" class="img-fluid hero-img" alt="Image">
+      <div class="absolute inset-0 z-20 flex items-center justify-center">
+        <div class="text-center text-white px-4">
+          <h1 class="text-5xl md:text-7xl font-serif mb-6">
+            Discover and Embrace<br />
+            Eternal Fragrance
+          </h1>
+          <p class="text-lg mb-8 max-w-2xl mx-auto">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+            dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+          </p>
+          <button (click)="scrollToAI()" class="button">
+            Find your Fragrance Now!
+          </button>
         </div>
       </div>
     </div>
   </div>
-</div>
+</section>
 <!-- End Hero Section -->
 
-<!-- Start Product Section -->
-<div class="product-section">
+<!-- Start Category Section -->
+<div class="product-section bg-light py-5">
   <div class="container">
-    <div class="row bg-gray-100 flex justify-center items-center min-h-screen">
-     
+    <div class="text-center mb-5">
+      <h2 class="mb-4 section-title">Discover Our Unmatched Fragrances.</h2>
+    </div>
 
-      <!-- Start Column 1 -->
-      <div class="col-md-12 col-lg-3 mb-5 mb-lg-0">
-        <h2 class="mb-4 section-title">Crafted with excellent material.</h2>
-        <p class="mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit
-          imperdiet dolor tempor tristique. </p>
-        <p><a href="shop.html" class="btn">Explore</a></p>
-      </div>
-      <!-- End Column 1 -->
+    <div class="row justify-content-center">
 
-      <!-- Start Column 2 -->
-      <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-        <a class="product-item" href="cart.html">
-          <img src="../../assets/images/image-61.png" alt="Perfume 1" class="img-fluid rounded-lg">
-          <h2 class="text-center product-title font-bold text-xl mt-4">Sublime</h2>
-          <p class="text-center text-gray-500">Luxury | Elegance</p>
-          <span class="icon-cross">
-            <img src="../../assets/images/cross.svg" class="img-fluid">
-          </span>
-        </a>
+      <!-- Column 1 -->
+      <div class="col-md-4 col-lg-4 text-center">
+        <div class="product-item">
+          <div class="product-card bg-white p-4 rounded-lg shadow">
+            <img src="../../assets/images/image-61.png" alt="Perfume 1" class="img-fluid rounded">
+            <h2 class="product-title font-bold text-xl mt-4">Sublime</h2>
+            <p class="text-gray-500">Luxury | Elegance</p>
+          </div>
+        </div>
       </div>
-      <!-- End Column 2 -->
 
-      <!-- Start Column 3 -->
-      <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-        <a class="product-item" href="cart.html">
-          <img src="../../assets/images/image-61.png" alt="Perfume 1" class="img-fluid rounded-lg">
-          <h2 class="text-center product-title font-bold text-xl mt-4">Prestige</h2>
-          <p class="text-center text-gray-500">Luxury | Elegance</p>
-          <span class="icon-cross">
-            <img src="../../assets/images/cross.svg" class="img-fluid">
-          </span>
-        </a>
+      <!-- Column 2 -->
+      <div class="col-md-4 col-lg-4 text-center">
+        <div class="product-item">
+          <div class="product-card bg-white p-4 rounded-lg shadow">
+            <img src="../../assets/images/image-61.png" alt="Perfume 2" class="img-fluid rounded">
+            <h2 class="product-title font-bold text-xl mt-4">Prestige</h2>
+            <p class="text-gray-500">Luxury | Elegance</p>
+          </div>
+        </div>
       </div>
-      <!-- End Column 3 -->
 
-      <!-- Start Column 4 -->
-      <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-        <a class="product-item" href="cart.html">
-          <img src="../../assets/images/image-61.png" alt="Perfume 1" class="img-fluid rounded-lg">
-          <h2 class="text-center product-title font-bold text-xl mt-4">Imperial</h2>
-          <p class="text-center text-gray-500">Luxury | Elegance</p>
-          <span class="icon-cross">
-            <img src="../../assets/images/cross.svg" class="img-fluid">
-          </span>
-        </a>
+      <!-- Column 3 -->
+      <div class="col-md-4 col-lg-4 text-center">
+        <div class="product-item">
+          <div class="product-card bg-white p-4 rounded-lg shadow">
+            <img src="../../assets/images/image-61.png" alt="Perfume 3" class="img-fluid rounded">
+            <h2 class="product-title font-bold text-xl mt-4">Imperial</h2>
+            <p class="text-gray-500">Luxury | Elegance</p>
+          </div>
+        </div>
       </div>
-      <!-- End Column 4 -->
 
     </div>
   </div>
 </div>
-<!-- End Product Section -->
+<!-- End Category Section -->
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center g-4 w-100">
+      <div class="col-12 col-md-6 " style="max-width: 500px;">
+        <img src="../../assets/images/best-seller.png" alt="Oceanic Fragrance" class="w-100 rounded" />
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="small mb-2">Inspired by</div>
+        <h2 class="display-4 mb-4">Oceanic Smells</h2>
+        <p class="text-muted mb-4">
+          Discover our exclusive collection, where we artfully recreate
+          fragrances inspired by renowned brands. Each scent is crafted to
+          bring you luxury, elegance, and sophistication at an affordable
+          price, letting you indulge in timeless aromas without compromise.
+        </p>
+        <button class="button">
+          Buy Now
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AI input-->
+<section id="ai-section" class="py-5">
+  <div class="container">
+    <!-- Text Section -->
+    <div class="mb-4">
+      <h2 class="text-success fw-semibold mb-2">Hi there,</h2>
+      <h3 class="h3 fw-bold mb-3">Let’s Generate your own unique smell</h3>
+      <p class="text-muted" style="max-width: 600px;">
+        Discover our exclusive collection, where we artfully recreate
+        fragrances inspired by renowned brands. Each scent is crafted to
+        bring you luxury, elegance.
+      </p>
+    </div>
+
+    <!-- Button Prompts -->
+    <div class="d-flex gap-3 mb-4 flex-wrap">
+      <button *ngFor="let prompt of prompts" class="btn btn-outline-success rounded-pill px-4 py-2 fw-medium">
+        {{ prompt }}
+      </button>
+    </div>
+
+    <!-- Textarea Input -->
+    <div class="mx-auto position-relative  rounded d-flex flex-column w-100">
+      <textarea [(ngModel)]="formData.message" placeholder="Type in whatever excites you and makes you elated..."
+        class="form-control p-3 h-100 bg-transparent border border-success rounded-lg resize-none shadow-sm flex-grow-1 w-100"
+        style="outline: none; min-height: 150px; padding-right: 50px;"></textarea>
+
+      <!-- Character Counter & Submit Button -->
+      <div class="d-flex justify-content-end align-items-center position-absolute bottom-0 start-0 p-4 w-100">
+        <span class="text-muted small px-3">{{ formData.message.length }}/1000</span>
+        <button type="submit" (click)="onSubmit()" class="btn rounded-circle p-2"
+          style="background: linear-gradient(90deg, #2e7d32, #1b5e20); color: white; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+          <img src="../../assets/images/send-arrow.svg" style="width: 100%;" alt="send">
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- AI -->
+
+<section class="section-bg position-relative text-center">
+  <div class="container">
+    <h2 class="fw-bold mb-4">Fragrance</h2>
+
+    <div class="position-relative d-inline-block">
+      <img src="../../assets/images/freepik_br_df2a9526-0084-431e-9143-b45a4e30205e 1.png" alt="Fragrance Bottles"
+        class="rotating-image">
+
+      <!-- Floating Text Around the Bottle -->
+      <div class="stats-box orbit-text orbit-text-1">
+        <p class="fw-bold mb-0">90%</p>
+        <p class="text-muted">Long lasting fragrance for up to 3 days</p>
+      </div>
+
+      <div class="stats-box orbit-text orbit-text-2">
+        <p class="fw-bold mb-0">100%</p>
+        <p class="text-muted">Users reported an intense and luxurious scent</p>
+      </div>
+
+      <div class="stats-box orbit-text orbit-text-3">
+        <p class="fw-bold mb-0">95%</p>
+        <p class="text-muted">Said they would purchase again</p>
+      </div>
+
+      <div class="stats-box orbit-text orbit-text-4">
+        <p class="fw-bold mb-0">88%</p>
+        <p class="text-muted">Received compliments on their unique scent</p>
+      </div>
+    </div>
+
+    <h2 class="fw-bold mt-4">Undiluted</h2>
+  </div>
+</section>
 
 <!-- Start Why Choose Us Section -->
 <div class="why-choose-section">
   <div class="container">
     <div class="row justify-content-between">
       <div class="col-lg-6">
+        <h2 class="fs-6">Ask Yourself?</h2>
         <h2 class="section-title">Why Choose Us</h2>
         <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet
           dolor tempor tristique.</p>
@@ -98,7 +185,7 @@
           <div class="col-6 col-md-6">
             <div class="feature">
               <div class="icon">
-                <img src="../../assets/images/truck.svg" alt="Image" class="imf-fluid">
+                <img src="../../assets/images/bag.png" alt="Image" class="img-fluid">
               </div>
               <h3>Fast &amp; Free Shipping</h3>
               <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
@@ -108,7 +195,7 @@
           <div class="col-6 col-md-6">
             <div class="feature">
               <div class="icon">
-                <img src="../../assets/images/bag.svg" alt="Image" class="imf-fluid">
+                <img src="../../assets/images/Vector.png" alt="Image" class="imf-fluid">
               </div>
               <h3>Easy to Shop</h3>
               <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
@@ -118,7 +205,7 @@
           <div class="col-6 col-md-6">
             <div class="feature">
               <div class="icon">
-                <img src="../../assets/images/support.svg" alt="Image" class="imf-fluid">
+                <img src="../../assets/images/Frame.png" alt="Image">
               </div>
               <h3>24/7 Support</h3>
               <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
@@ -128,21 +215,21 @@
           <div class="col-6 col-md-6">
             <div class="feature">
               <div class="icon">
-                <img src="../../assets/images/return.svg" alt="Image" class="imf-fluid">
+                <img src="../../assets/images/return.png" alt="Image" class="imf-fluid">
               </div>
               <h3>Custom Made</h3>
               <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
             </div>
           </div>
-
+          <button class="button">
+            Buy Now
+          </button>
         </div>
       </div>
 
       <div class="col-lg-5">
         <div class="img-wrap">
-          <img
-            src="https://images.pexels.com/photos/3865676/pexels-photo-3865676.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-            alt="Image" class="img-fluid">
+          <img src="../../assets/images/bottle.png" alt="Image" class="img-fluid">
         </div>
       </div>
 
@@ -151,120 +238,32 @@
 </div>
 <!-- End Why Choose Us Section -->
 
-<!-- Start We Help Section -->
-<div class="we-help-section">
+<!-- Categories Section -->
+<section class="py-5 bg-light">
   <div class="container">
-    <div class="row justify-content-between">
-      <div class="col-lg-7 mb-5 mb-lg-0">
-        <div class="imgs-grid">
-          <div class="grid grid-1"><img
-              src="https://images.pexels.com/photos/12402360/pexels-photo-12402360.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"
-              alt="Untree.co"></div>
-          <div class="grid grid-2"><img
-              src="https://images.pexels.com/photos/8166624/pexels-photo-8166624.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"
-              alt="Untree.co"></div>
-          <div class="grid grid-3"><img
-              src="https://images.pexels.com/photos/15539702/pexels-photo-15539702/free-photo-of-perfume-and-vase-with-plant.png?auto=compress&cs=tinysrgb&w=800&lazy=load"
-              alt="Untree.co"></div>
-        </div>
-      </div>
-      <div class="col-lg-5 ps-lg-5">
-        <h2 class="section-title mb-4">We Help You Make Modern Interior Design</h2>
-        <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac
-          aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique
-          senectus et netus et malesuada</p>
+    <div class="row g-4">
 
-        <ul class="list-unstyled custom-list my-4">
-          <li>Donec vitae odio quis nisl dapibus malesuada</li>
-          <li>Donec vitae odio quis nisl dapibus malesuada</li>
-          <li>Donec vitae odio quis nisl dapibus malesuada</li>
-          <li>Donec vitae odio quis nisl dapibus malesuada</li>
-        </ul>
-        <p><a herf="#" class="btn">Explore</a></p>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- End We Help Section -->
+      <div *ngFor="let category of categories" class="col-md-4">
+        <div class="position-relative overflow-hidden rounded shadow-lg category-card">
 
-<!-- Start Popular Product -->
-<div class="popular-product">
-  <div class="container">
-    <div class="row">
+          <!-- Background Image -->
+          <img [src]="category.image" alt="{{ category.title }}" class="w-100 d-block object-fit-cover"
+            style="aspect-ratio: 1/1;" />
 
-      <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
-        <div class="product-item-sm d-flex">
-          <div class="thumbnail">
-            <img src="https://file.aiquickdraw.com/imgcompressed/img/compressed_b513e3221054b3d4179868dcd6f4c311.webp"
-              alt="Image" class="img-fluid">
+          <!-- Overlay -->
+          <div
+            class="overlay position-absolute bottom-0 start-0 w-100 bg-dark bg-opacity-50 text-white text-center px-3 py-3">
+            <h3 class="fs-5 fw-semibold mb-2">{{ category.title }}</h3>
+            <button class="button">View</button>
           </div>
-          <div class="pt-3">
-            <h3>Sublime</h3>
-            <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio </p>
-            <p><a href="#">Read More</a></p>
-          </div>
-        </div>
-      </div>
 
-      <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
-        <div class="product-item-sm d-flex">
-          <div class="thumbnail">
-            <img src="https://file.aiquickdraw.com/imgcompressed/img/compressed_b513e3221054b3d4179868dcd6f4c311.webp"
-              alt="Image" class="img-fluid">
-          </div>
-          <div class="pt-3">
-            <h3>Prestige</h3>
-            <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio </p>
-            <p><a href="#">Read More</a></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
-        <div class="product-item-sm d-flex">
-          <div class="thumbnail">
-            <img src="https://file.aiquickdraw.com/imgcompressed/img/compressed_b513e3221054b3d4179868dcd6f4c311.webp"
-              alt="Image" class="img-fluid">
-          </div>
-          <div class="pt-3">
-            <h3>Imperial</h3>
-            <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio </p>
-            <p><a href="#">Read More</a></p>
-          </div>
         </div>
       </div>
 
     </div>
   </div>
-</div>
-<!-- End Popular Product -->
+</section>
 
-<!-- Start Testimonial Slider -->
 <app-testimonial></app-testimonial>
-<!-- End Testimonial Slider -->
-
 
 <app-footer></app-footer>
-
-<!-- <app-navbar></app-navbar>
-<div class="hero-section d-flex">
-  <div class="overlay">
-    <div class="content text-center" >
-      <h1 class="hero-title">Unveil Your Signature Scent</h1>
-      <p class="hero-subtitle">
-        A fragrance is your invisible signature. Describe your dream scent below, and let us craft it for you.
-      </p>
-      <form (ngSubmit)="onSubmit()" class="form">
-        <input
-          type="text"
-          class="form-control custom-input"
-          placeholder="Describe your scent... (e.g., sensual, spicy, with a woody undertone)"
-          [(ngModel)]="formData.scentDescription"
-          name="scentDescription"
-          required
-        />
-        <button class="btn custom-button mt-4" type="submit">Discover My Scent</button>
-      </form>
-    </div>
-  </div>
-</div> -->

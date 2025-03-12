@@ -12,12 +12,9 @@ import { CartService } from '../../cart/cartService/cart.service';
 export class NavbarComponent {
     isDropdownVisible = false;
     cartCount = 0;
-    isCartOpen = false; // Controls the sidebar visibility
 
-    constructor(private router: Router, private cartService: CartService) {
-        // this.cartService.subscribe((items) => {
-        //     this.cartCount = items.length;
-        //   });
+    constructor(private router: Router, public cartService: CartService) {
+
     }
 
     toggleDropdown() {
@@ -28,10 +25,5 @@ export class NavbarComponent {
         this.router.navigate([route]);
     }
    
-  
 
-  
-    toggleCartSidebar() {
-      this.isCartOpen = !this.isCartOpen;
-    }
 }

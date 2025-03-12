@@ -1,0 +1,111 @@
+@import "../template-selector/template-selector.component.scss";
+
+.form-container {
+    width: 350px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 2px solid black;
+}
+
+.id-card-left-column{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    background-color: #a67c52;
+    z-index: 11;
+}
+
+.id-card-right-column{
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 100px;
+    // bottom: ;
+    height: 100%;
+    background-color: #7cc911;
+    z-index: 1;
+}
+
+.id-card-canvas{
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    pointer-events: none; 
+}
+
+.id-card-canvas * {
+    pointer-events: auto; /* Re-enable clicking on text and inputs */
+  }
+.id-card-photo {
+    width: 200px;
+    height: 200px;
+    background-color: #ddd;
+    top: 50px;
+    left: 120px;
+    position:absolute;
+    background-image: url(../../../../assets/images/person-1.jpg);
+    background-size: contain;
+}
+
+.details { 
+    padding: 40px;
+    position: absolute;
+    top: 250px;
+    left: 40px;  
+}
+
+.details h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.details p {
+    font-size: 16px;
+    color: #777;
+}
+
+.id-card-name{
+    position: absolute;
+    top: 30px;
+    left: 110px;
+    white-space: nowrap;
+}
+.id-card-email{
+    position: absolute;
+    top: 140px;
+    left: 60px;
+    white-space: nowrap;
+}
+.id-card-title{
+    position: absolute;
+    top: 70px;
+    white-space: nowrap;
+    left: 90px;
+}
+.id-card-address{
+    position: absolute;
+    top: 200px;
+    white-space: nowrap;
+    left: 60px;
+    // text-align: center;
+}
+.id-card-phone{
+    position: absolute;
+    top: 170px;
+    left: 60px;
+    white-space: nowrap;
+}
+
+.form-title{
+    text-align: left;
+}
+

@@ -1,31 +1,169 @@
-
+/* General Styles */
 body {
-  font-family: 'Lora', serif; 
-  color: #fff;
-  line-height: 1.6;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #111; 
 }
 
-.hero-section {
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background: url('https://images.pexels.com/photos/7670678/pexels-photo-7670678.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center/cover;
-  background-attachment: fixed; 
-  text-align: center;
-  color: #fff;
-  font-size: 5rem; 
-  font-weight: 700;
-  color: #f8f8f8;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.7);
-  margin-bottom: 20px;
-  animation: fadeIn 1.5s ease-out;
+h1, h2, h3 {
+  font-family: 'Lora', serif;
 }
+
+/* Hero Section */
+section.relative {
+  position: relative;
+  height: 100vh;
+  background-color: #0A2A1F;
+}
+
+section.relative img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.2;
+}
+
+section.relative .absolute {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.relative .absolute .text-center {
+  color: white;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+section.relative .absolute h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+section.relative .absolute p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+section.relative .absolute button {
+  padding: 0.8rem 2rem;
+  background-color: #2B5C43;
+  color: white;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+section.relative .absolute button:hover {
+  background-color: #1F4432;
+}
+
+/* Discover Our Unmatched Fragrances */
+section.py-20 {
+  padding: 5rem 2rem;
+}
+
+section.py-20 h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+section.py-20 .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+section.py-20 .grid .bg-\#F8F6F3 {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+section.py-20 .grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+
+/*FRAGRANCE*/
+/* FRAGRANCE */
+@keyframes rotateImage {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Orbiting Text Animations */
+@keyframes orbitText {
+  0% { transform: rotate(0deg) translateX(150%) rotate(0deg); }
+  25% { transform: rotate(90deg) translateX(150%) rotate(-90deg); }
+  50% { transform: rotate(180deg) translateX(150%) rotate(-180deg); }
+  75% { transform: rotate(270deg) translateX(150%) rotate(-270deg); }
+  100% { transform: rotate(360deg) translateX(150%) rotate(-360deg); }
+}
+
+/* Rotating Bottle */
+.rotating-image {
+  animation: rotateImage 10s linear infinite;
+  width: 450px;
+  max-width: 100%;
+}
+
+/* Floating Text */
+.orbit-text {
+  position: absolute;
+  width: 180px;
+  text-align: center;
+  background: white;
+  // background: rgba(255, 255, 255, 0.8);
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  animation: orbitText 10s linear infinite;
+}
+
+/* Positioning Four Floating Texts */
+.orbit-text-1 { top: 10%; left: 50%; animation-delay: 0s; }
+.orbit-text-2 { top: 50%; left: 90%; animation-delay: 2.5s; }
+.orbit-text-3 { bottom: 10%; left: 50%; animation-delay: 5s; }
+.orbit-text-4 { top: 50%; left: 10%; animation-delay: 7.5s; }
+
+/* Background Styling */
+.section-bg {
+  background:  #0a2a1f;
+  // background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+  padding: 80px 0;
+  position: relative;
+}
+
+
+
+// .hero-section {
+//   position: relative;
+//   align-items: center;
+//   justify-content: center;
+//   // height: 100vh;
+//   // background: url('https://images.pexels.com/photos/7670678/pexels-photo-7670678.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center/cover;
+//   background-attachment: fixed; 
+//   text-align: center;
+//   color: #fff;
+//   font-size: 5rem; 
+//   font-weight: 700;
+//   color: #f8f8f8;
+//   letter-spacing: 2px;
+//   text-transform: uppercase;
+//   text-shadow: 0 2px 15px rgba(0, 0, 0, 0.7);
+//   margin-bottom: 20px;
+//   animation: fadeIn 1.5s ease-out;
+// }
 
 .hero-subtitle {
   font-family: 'Lora', serif; 
@@ -119,5 +257,54 @@ body {
   }
 }
 
+.bg-light {
+  background: #f4efe8; /* Beige background */
+}
+
+.product-card {
+  max-width: 350px;
+  margin: auto;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.text-gray-500 {
+  color: #7d7d7d;
+}
+
+.shadow {
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.button{
+  background: linear-gradient(to right, #215D4F, #85B440); /* Adjust colors */
+  color: white;
+  font-size: 18px;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 25%;
+}
+
+.button:hover {
+  background: linear-gradient(to right, #1A4A3D, #6D902E); /* Darker gradient on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
 
 
+.category-card .overlay {
+  opacity: 0; /* Initially hidden */
+  visibility: hidden;
+  transform: translateY(20px); /* Slightly pushed down */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.category-card:hover .overlay {
+  opacity: 1; /* Show on hover */
+  visibility: visible;
+  transform: translateY(0); /* Slide up */
+}

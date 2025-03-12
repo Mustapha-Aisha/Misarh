@@ -1,0 +1,14 @@
+.card {
+    transition: transform 0.3s ease;
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+  
+  .hover-opacity {
+    transition: opacity 0.3s ease;
+  }
+  .card:hover .hover-opacity {
+    opacity: 1 !important;
+  }
+  
