@@ -1,14 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
 @use 'sass:map';
 @use '@angular/material' as mat;
 
-
-/*
-* Template Name: UntreeStore
-* Template Author: Untree.co
-* Author URI: https://untree.co/
-* License: https://creativecommons.org/licenses/by/3.0/
-*/
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
@@ -16,7 +8,7 @@
 // Create SCSS variables
 $white: #ffffff;
 $black: #000000;
-$primary: #3b5d50;
+$primary: #0f262c;
 $secondary: #f9bf29;
 $dark: #2f2f2f;
 $light: #F2E9DA;
@@ -62,7 +54,7 @@ a {
 }
 
 .custom-navbar {
-	background: $primary!important;
+	background: #040e10 !important;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	.navbar-brand {
@@ -139,8 +131,9 @@ a {
 	}
 }
 
-// Hero 
+// About Section 
 .hero {
+	// background: #0b2e2c;
 	background: $primary;
 	padding: calc(4rem - 30px) 0 0rem 0;
 	@media (min-width: $md) {
@@ -266,8 +259,7 @@ a {
 	color: $dark;
 }
 .product-section {
-	padding: 7rem 0;
-
+	padding: 150px 0;
 	.product-item {
 		text-align: center;
 		text-decoration: none;
@@ -348,7 +340,7 @@ a {
 
 // Why Choose us section
 .why-choose-section {
-	padding: 7rem 0;
+	// padding: 7rem 0;
 
 	.img-wrap {
 		position: relative;
@@ -378,18 +370,6 @@ a {
 		background: #0C6654;
 		padding: 10px;
 		border-radius: 20px;
-
-		// &:before {
-		// 	content: "";
-		// 	width: 33px;
-		// 	height: 33px;
-		// 	position: absolute;
-		// 	background: #0C6654;
-		// 	// background: rgba($primary, .2);
-		// 	border-radius: 50%;
-		// 	right: -8px;
-		// 	bottom: 0;
-		// }
 
 	}
 	h3 {
@@ -617,53 +597,10 @@ a {
 	}
 }
 
-// Blog Section
-.before-footer-section {
-	padding: 10rem 0 12rem 0!important;
-}
-.blog-section {
-	padding: 7rem 0 12rem 0;
-	.post-entry {
-		a {
-			text-decoration: none;
-		}
-		.post-thumbnail {
-			display: block;
-			margin-bottom: 20px;
-			img {
-				border-radius: 20px;
-				transition: .3s all ease;
-			}
-		}
-		.post-content-entry {
-			padding-left: 15px;
-			padding-right: 15px;
-			h3 {
-				font-size: 16px;
-				margin-bottom: 0;
-				font-weight: 600;
-				margin-bottom: 7px;
-			}
-			.meta {
-				font-size: 14px;
-				a {
-					font-weight: 600;
-				}
-			}
-		}
-		&:hover, &:focus {
-			.post-thumbnail {
-				img {
-					opacity: .7;
-				}
-			}
-		}
-	}
-}
 
 // Footer Section
 .footer-section {
-	padding: 80px 0;
+	padding: 200px 0;
 	background: $white;
 	.relative {
 		position: relative;

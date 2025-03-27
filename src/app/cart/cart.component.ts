@@ -29,7 +29,7 @@ export class CartComponent implements OnInit {
   cartItems: CartItem[] = [];
   shipping: number = 15;
 
-  constructor(private apiService: ApiService, private fb: FormBuilder, private router: Router, private cartService: CartService) {
+  constructor(private fb: FormBuilder, private router: Router, private cartService: CartService) {
     this.shippingForm = this.fb.group({
       address: ['', Validators.required],
       city: ['', Validators.required],
@@ -43,7 +43,12 @@ export class CartComponent implements OnInit {
       this.isCartOpen = status;
     });
 
-    this.cartService.loadCart();
+    this.cartService.cartItems.subscribe((items: CartItem[]) =>{
+      this.cartItems = items;
+    });
+
+
+
 
     this.customer = JSON.parse(localStorage.getItem('customer-info') || '{}');
     if (this.customer?.id) {

@@ -49,7 +49,6 @@ export interface ProductEntity {
 export interface CartItem {
   id: string;
   cart: string;
-  // price: number;
   quantity: number;
   product: ProductEntity;
 }

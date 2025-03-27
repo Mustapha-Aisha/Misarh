@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-
 import { Router } from '@angular/router';
-// import { Category, ProductEntity, Variation } from '../products/product.module
 import { ApiService } from '../api.service';
 import { Category, ProductEntity, Variation } from '../products/product.module';
 import { NavbarComponent } from "../home/navbar/navbar.component";
@@ -55,8 +53,6 @@ export class ProductDetailsComponent implements OnInit {
   formattedProduct: any = this.products ? JSON.parse(this.products) : null;
 
   constructor(
-    private apiService: ApiService,
-    private router: Router,
     private cartService: CartService
   ) {}
 
@@ -160,21 +156,9 @@ export class ProductDetailsComponent implements OnInit {
   }
   
   addToCart(): void {
-    const payload = {
-      productId: this.product.id,
-      quantity: 1, 
-    };
-
-    this.apiService.updateProduct(this.product.id, this.product).subscribe({
-      next: (updateRes: any) => {
-      if(updateRes.status_code !== 200) return console.error('Failed to update product:', updateRes.message);
-        this.cartService.addToCart(payload);
-      },
-      error: (updateErr: any) => {
-        console.error('Error updating product:', updateErr);
-      }
-    });
+    this.cartService.addToCartWithUpdate(this.product);
   }
+
   
   
   
