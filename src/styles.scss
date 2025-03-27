@@ -1,4 +1,6 @@
 @use 'sass:map';
+@use "sass:color";
+
 @use '@angular/material' as mat;
 
 
@@ -219,8 +221,8 @@ a {
 	border-color: $dark;
 	&:hover {
 		color: $white;
-		background: darken($dark, 5%);
-		border-color: darken($dark, 5%);
+		background: color.adjust($dark, $lightness: -5%);
+		border-color: color.adjust($dark, $lightness: -5%);
 	}
 	&:active, &:focus {
 		outline: none!important;

@@ -32,12 +32,6 @@ export const routes: Routes = [
   { path: 'checkout', component: OrderSummaryComponent },
   { path: 'contact-us', component: ContactUsComponent },
   { path: 'shop', component: ShopComponent },
-  
-  {
-    path: 'id-card',
-    loadChildren: () =>
-      import('./features/id-card/id-card.module').then((m) => m.IdCardModule),
-  },
   { path: '**', redirectTo: 'home' },
 ];
 
