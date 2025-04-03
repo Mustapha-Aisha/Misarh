@@ -349,120 +349,120 @@ section.py-20 .grid img {
 /* Default styles are already set, so we only need to tweak for different screen sizes */
 
 /* Tablet (768px and below) */
-// @media (max-width: 768px) {
-//   h1 {
-//     font-size: 2.5rem; /* Reduce hero text size */
-//   }
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem; /* Reduce hero text size */
+  }
 
-//   h2 {
-//     font-size: 2rem;
-//   }
+  h2 {
+    font-size: 2rem;
+  }
 
-//   p {
-//     font-size: 1rem;
-//   }
+  p {
+    font-size: 1rem;
+  }
 
-//   /* Adjust button sizes */
-//   .button {
-//     padding: 0.6rem 1.5rem;
-//     font-size: 1rem;
-//   }
+  /* Adjust button sizes */
+  .button {
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+  }
 
-//   /* Make sections stack */
-//   .d-flex {
-//     flex-direction: column;
-//     align-items: center;
-//   }
+  /* Make sections stack */
+  .d-flex {
+    flex-direction: column;
+    align-items: center;
+  }
 
-//   /* Image adjustments */
-//   .img-fluid {
-//     max-width: 80%;
-//   }
+  /* Image adjustments */
+  .img-fluid {
+    max-width: 80%;
+  }
 
-//   /* Reduce padding/margins */
-//   .container {
-//     padding: 0 1rem;
-//   }
-// }
+  /* Reduce padding/margins */
+  .container {
+    padding: 0 1rem;
+  }
+}
 
-// /* Mobile (480px and below) */
-// @media (max-width: 480px) {
-//   h1 {
-//     font-size: 2rem;
-//   }
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
 
-//   h2 {
-//     font-size: 1.8rem;
-//   }
+  h2 {
+    font-size: 1.8rem;
+  }
 
-//   p {
-//     font-size: 0.9rem;
-//   }
+  p {
+    font-size: 0.9rem;
+  }
 
-//   /* Adjust hero section */
-//   .hero-section {
-//     text-align: center;
-//     padding-top: 10vh;
-//   }
+  /* Adjust hero section */
+  .hero-section {
+    text-align: center;
+    padding-top: 10vh;
+  }
 
-//   .hero-section img {
-//     max-width: 100%;
-//     height: auto;
-//   }
+  .hero-section img {
+    max-width: 100%;
+    height: auto;
+  }
 
-//   /* Adjust perfume cards */
-//   .product-item {
-//     width: 90%;
-//     margin-bottom: 1rem;
-//   }
+  /* Adjust perfume cards */
+  .product-item {
+    width: 90%;
+    margin-bottom: 1rem;
+  }
 
-//   /* Buttons */
-//   .button {
-//     font-size: 0.9rem;
-//     padding: 0.5rem 1rem;
-//   }
+  /* Buttons */
+  .button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
 
-//   /* Reduce spacing */
-//   .py-5 {
-//     padding: 2rem 0;
-//   }
+  /* Reduce spacing */
+  .py-5 {
+    padding: 2rem 0;
+  }
 
-//   /* Stack AI button prompts */
-//   .d-flex.gap-3 {
-//     flex-wrap: wrap;
-//     justify-content: center;
-//   }
+  /* Stack AI button prompts */
+  .d-flex.gap-3 {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-//   /* Center text in fragrance section */
-//   .stats-box {
-//     text-align: center;
-//     max-width: 80%;
-//     margin: 0 auto;
-//   }
-// }
+  /* Center text in fragrance section */
+  .stats-box {
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
 
-// /* Large screens (1200px and above) */
-// @media (min-width: 1200px) {
-//   h1 {
-//     font-size: 4.5rem;
-//   }
+/* Large screens (1200px and above) */
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 4.5rem;
+  }
 
-//   h2 {
-//     font-size: 2.5rem;
-//   }
+  h2 {
+    font-size: 2.5rem;
+  }
 
-//   p {
-//     font-size: 1.2rem;
-//   }
+  p {
+    font-size: 1.2rem;
+  }
 
-//   /* Increase button sizes */
-//   .button {
-//     font-size: 1.2rem;
-//     padding: 1rem 2rem;
-//   }
+  /* Increase button sizes */
+  .button {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+  }
 
-//   /* Center content */
-//   .container {
-//     max-width: 1200px;
-//   }
-// }
+  /* Center content */
+  .container {
+    max-width: 1200px;
+  }
+}

@@ -27,75 +27,32 @@
 </section>
 
 
-<!-- Start Category Section -->
-<div class="product-section ">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="mb-4 section-title">Discover Our Unmatched Fragrances.</h2>
-    </div>
-
-    <div class="row justify-content-center">
-
-      <!-- Column 1 -->
-      <div class="col-md-4 col-lg-4 text-center">
-        <div class="product-item">
-          <div class="product-card bg-white p-4 rounded-lg shadow">
-            <img src="../../assets/images/image-61.png" alt="Perfume 1" class="img-fluid rounded">
-            <h2 class="product-title font-bold text-xl mt-4">Sublime</h2>
-            <p class="text-gray-500">Luxury | Elegance</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Column 2 -->
-      <div class="col-md-4 col-lg-4 text-center">
-        <div class="product-item">
-          <div class="product-card bg-white p-4 rounded-lg shadow">
-            <img src="../../assets/images/image-61.png" alt="Perfume 2" class="img-fluid rounded">
-            <h2 class="product-title font-bold text-xl mt-4">Prestige</h2>
-            <p class="text-gray-500">Luxury | Elegance</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Column 3 -->
-      <div class="col-md-4 col-lg-4 text-center">
-        <div class="product-item">
-          <div class="product-card bg-white p-4 rounded-lg shadow">
-            <img src="../../assets/images/image-61.png" alt="Perfume 3" class="img-fluid rounded">
-            <h2 class="product-title font-bold text-xl mt-4">Imperial</h2>
-            <p class="text-gray-500">Luxury | Elegance</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-
+<!-- Categories Section -->
 <section class=" bg-light" style="padding: 150px 0;">
   <div class="container">
-    <div class="d-flex justify-content-between align-items-center g-4 w-100">
-      <div class="col-12 col-md-6 " style="max-width: 500px;">
-        <img src="../../assets/images/best-seller.png" alt="Oceanic Fragrance" class="w-100" />
+    <div class="row g-4">
+
+      <div *ngFor="let category of categories" class="col-md-4">
+        <div class="position-relative overflow-hidden rounded shadow-lg category-card">
+
+          <!-- Background Image -->
+          <img [src]="category.image" alt="{{ category.title }}" class="w-100 d-block object-fit-cover"
+            style="aspect-ratio: 1/1;" />
+
+          <!-- Overlay -->
+          <div
+            class="overlay position-absolute bottom-0 start-0 w-100 bg-dark bg-opacity-50 text-white text-center px-3 py-3">
+            <h3 class="fs-5 fw-semibold mb-2">{{ category.title }}</h3>
+            <button class="button">View</button>
+          </div>
+
+        </div>
       </div>
-      <div class="col-12 col-md-6">
-        <div class="fw-medium mb-2">Inspired by</div>
-        <h2 class="display-5 mb-4">Oceanic Smells</h2>
-        <p class="text-muted mb-4">
-          Discover our exclusive collection, where we artfully recreate
-          fragrances inspired by renowned brands. Each scent is crafted to
-          bring you luxury, elegance, and sophistication at an affordable
-          price, letting you indulge in timeless aromas without compromise.
-        </p>
-        <button class="button">
-          Buy Now
-        </button>
-      </div>
+
     </div>
   </div>
 </section>
+
 
 <!-- AI input-->
 <section id="ai-section" style="padding: 150px 0;">
@@ -135,6 +92,34 @@
     </div>
   </div>
 </section>
+
+
+
+
+
+<section class=" bg-light" style="padding: 150px 0;">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center g-4 w-100">
+      <div class="col-12 col-md-6 " style="max-width: 500px;">
+        <img src="../../assets/images/best-seller.png" alt="Oceanic Fragrance" class="w-100" />
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="fw-medium mb-2">Inspired by</div>
+        <h2 class="display-5 mb-4">Oceanic Smells</h2>
+        <p class="text-muted mb-4">
+          Discover our exclusive collection, where we artfully recreate
+          fragrances inspired by renowned brands. Each scent is crafted to
+          bring you luxury, elegance, and sophistication at an affordable
+          price, letting you indulge in timeless aromas without compromise.
+        </p>
+        <button class="button">
+          Buy Now
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
 <section class="section-bg position-relative text-center" style="padding: 150px 0;">
@@ -239,30 +224,51 @@
 
 
 <!-- Categories Section -->
-<section class=" bg-light" style="padding: 150px 0;">
+<!-- Start Category Section -->
+<div class="product-section ">
   <div class="container">
-    <div class="row g-4">
+    <div class="text-center mb-5">
+      <h2 class="mb-4 section-title">Discover Our Unmatched Fragrances.</h2>
+    </div>
 
-      <div *ngFor="let category of categories" class="col-md-4">
-        <div class="position-relative overflow-hidden rounded shadow-lg category-card">
+    <div class="row justify-content-center">
 
-          <!-- Background Image -->
-          <img [src]="category.image" alt="{{ category.title }}" class="w-100 d-block object-fit-cover"
-            style="aspect-ratio: 1/1;" />
-
-          <!-- Overlay -->
-          <div
-            class="overlay position-absolute bottom-0 start-0 w-100 bg-dark bg-opacity-50 text-white text-center px-3 py-3">
-            <h3 class="fs-5 fw-semibold mb-2">{{ category.title }}</h3>
-            <button class="button">View</button>
+      <!-- Column 1 -->
+      <div class="col-md-4 col-lg-4 text-center">
+        <div class="product-item">
+          <div class="product-card bg-white p-4 rounded-lg shadow">
+            <img src="../../assets/images/image-61.png" alt="Perfume 1" class="img-fluid rounded">
+            <h2 class="product-title font-bold text-xl mt-4">Sublime</h2>
+            <p class="text-gray-500">Luxury | Elegance</p>
           </div>
+        </div>
+      </div>
 
+      <!-- Column 2 -->
+      <div class="col-md-4 col-lg-4 text-center">
+        <div class="product-item">
+          <div class="product-card bg-white p-4 rounded-lg shadow">
+            <img src="../../assets/images/image-61.png" alt="Perfume 2" class="img-fluid rounded">
+            <h2 class="product-title font-bold text-xl mt-4">Prestige</h2>
+            <p class="text-gray-500">Luxury | Elegance</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Column 3 -->
+      <div class="col-md-4 col-lg-4 text-center">
+        <div class="product-item">
+          <div class="product-card bg-white p-4 rounded-lg shadow">
+            <img src="../../assets/images/image-61.png" alt="Perfume 3" class="img-fluid rounded">
+            <h2 class="product-title font-bold text-xl mt-4">Imperial</h2>
+            <p class="text-gray-500">Luxury | Elegance</p>
+          </div>
         </div>
       </div>
 
     </div>
   </div>
-</section>
+</div>
 
 <app-testimonial></app-testimonial>
 
