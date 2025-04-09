@@ -59,16 +59,11 @@ export class CartService {
       productId: product.id,
       quantity: 1,
     };
-  
-    console.log("Updating product before adding to cart:", product);
-  
     this.apiService.updateProduct(product.id, product).subscribe({
       next: (updateRes: any) => {
         if (updateRes.status_code !== 200) {
           return console.error('Failed to update product:', updateRes.message);
         }
-        
-        console.log("Product updated successfully. Now adding to cart:", payload);
         this.addToCart(payload);
       },
       error: (updateErr: any) => {
@@ -83,7 +78,6 @@ export class CartService {
     this.apiService.addToCart(payload).subscribe({
       next: (cartRes: { status_code: number; message: any }) => {
         if (cartRes.status_code === 200) {
-          console.log('Item added to cart successfully:', cartRes);
           this.loadCart(); 
         } else {
           console.error('Failed to add item to cart:', cartRes.message);
@@ -113,12 +107,13 @@ export class CartService {
     const numericPrice = parseFloat(price); 
     const numericDiscount = discount ? parseFloat(discount) : 0;
 
-    return numericPrice - (numericPrice * numericDiscount) / 100;
+    return parseFloat((numericPrice - (numericPrice * numericDiscount) / 100).toFixed(0));
 }
 
   loadCart(): void {
     this.apiService.getCart().subscribe({
       next: (res) => {
+        console.log('Cart loaded successfully:', res);
         this.cartItems$.next(res.items); 
       },
       error: (err) => {

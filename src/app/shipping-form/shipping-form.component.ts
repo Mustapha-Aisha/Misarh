@@ -19,49 +19,11 @@ import { NavbarComponent } from "../home/navbar/navbar.component";
     NavbarComponent
 ]
 })
-export class ShippingFormComponent implements OnInit {
-  shippingForm: FormGroup;
-  showModal: boolean = false;
-  orderId: string | null = null;
-
+export class ShippingFormComponent{
+  
   constructor(private apiService: ApiService, private route: ActivatedRoute, private fb: FormBuilder) {
-    this.shippingForm = this.fb.group({
-      address: ['', Validators.required],
-      city: ['', Validators.required],
-      country: ['', [Validators.required]]
-    });
+ 
   }
 
-  ngOnInit(): void {
-    this.route.queryParams.subscribe(params => {
-      this.orderId = params['orderId'];
-      console.log('Order ID:', this.orderId);
-    });
-  }
 
-  onSubmit(): void {  
-    if (this.shippingForm.valid) {
-      console.log(this.shippingForm.value);
-      const { address, city, country } = this.shippingForm.value;
-      const data = { contactAddress :`${address} ${ city}, ${country}`};
-      
-      this.apiService.updateCustomer(data).subscribe({
-        next: (response) => {
-          if (response.status) {
-            this.showModal = true;
-          }
-          console.log('Customer address updated successfully:', response);
-        },
-        error: (error) => {
-          console.error('Failed to update customer address:', error);
-        }
-      });
-    } else {
-      console.error('Shipping form is invalid!');
-    }
-  }
-
-  closeModal() {
-    this.showModal = false;
-  }
 }

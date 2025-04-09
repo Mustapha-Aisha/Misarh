@@ -15,7 +15,7 @@
       <h2 class="h4 fw-bold mb-1">Create Your Signature Scent</h2>
       <p class="text-light">Let our AI help you discover your perfect fragrance</p>
     </div>
-    <button class="btn btn-light text-dark px-4 py-2 rounded-pill">
+    <button (click)="goToAISection()" class="btn btn-light text-dark px-4 py-2 rounded-pill">
       Start Creating
       <i class="bi bi-arrow-right ms-2"></i>
     </button>
@@ -23,20 +23,20 @@
 
   <!-- Product Grid -->
   <div class="row g-4">
-    <div *ngFor="let product of products; let i = index" class="col-12 col-md-6 col-lg-3" >
+    <div *ngFor="let product of products;" class="col-12 col-md-6 col-lg-3" >
       <div class="card border-0 shadow-sm">
         <div class="position-relative">
-          <img [src]="product.image" [alt]="product.name" class="card-img-top img-fluid object-fit-cover " style="height: 250px; width: 100%;">
+          <img [src]="product.image_url" [alt]="product.name" class="card-img-top img-fluid object-fit-cover " style="height: 250px; width: 100%;">
           <button class="btn btn-light position-absolute top-0 end-0 m-2 p-2 rounded-circle opacity-0 hover-opacity">
             <i class="bi bi-heart-fill"></i>
           </button>
         </div>
         <div class="card-body">
           <h5 class="card-title fw-bold">{{ product.name }}</h5>
-          <p class="text-muted small">{{ product.description }}</p>
+          <!-- <p class="text-muted small">{{ product.description }}</p> -->
           <div class="d-flex justify-content-between align-items-center">
             <span class="fw-bold fs-5">${{ product.price }}</span>
-            <button class="btn btn-dark px-3 rounded-pill" (click)="addToCart(i)">Add to Cart</button>
+            <button class="btn btn-dark px-3 rounded-pill" (click)="addToCart(product)">Add to Cart</button>
           </div>
         </div>
       </div>

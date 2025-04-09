@@ -105,6 +105,14 @@ export class ApiService {
 
   }
 
+  getProducts(): Observable<APIResponse> {
+    const token = localStorage.getItem("customer"); 
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${token}`  
+    });
+    return this.http.get<APIResponse>('http://localhost:4500/products/', {headers});
+  }
 
 }
 
