@@ -11,22 +11,22 @@ import { tns } from 'tiny-slider';
 export class TestimonialComponent implements AfterViewInit {
   testimonials = [
     {
-      content: 'Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer convallis volutpat dui quis scelerisque',
-      name: 'Maria Jones',
-      position: 'CEO, Co-Founder, XYZ Inc.',
-      image: 'assets/images/person-1.jpg',
+      content: `I've tried like a dozen perfumes before and nothing ever felt right. Then I just typed up this random description about how I love hiking and campfires mixed with something sweet. What showed up literally smells like ME. Not some fancy perfume counter stuff - something that actually fits who I am. My boyfriend noticed immediately and said 'finally, that's YOU in a bottle`,
+      name: 'Jane Adeleye',
+      rating: 5,
+      image: 'assets/images/person1.jpg',
     },
     {
-      content: 'Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer convallis volutpat dui quis scelerisque',
-      name: 'John Doe',
-      position: 'CTO, ABC Ltd.',
-      image: 'assets/images/person-2.jpg',
+      content: `Okay so I was totally ready to roll my eyes at this whole 'describe your perfect scent' thing. But I was desperate after wasting hundreds on department store perfumes. I wrote about my grandma's kitchen and summer rain, hit submit, and honestly forgot about it. When it arrived? I almost cried. It's EXACTLY what I wanted but could never explain to sales people. Worth every penny!`,
+      name: 'Micheal Iwobi',
+      rating: 5,
+      image: 'assets/images/person2.jpg',
     },
     {
-      content: 'Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer convallis volutpat dui quis scelerisque',
-      name: 'Jane Smith',
-      position: 'Designer, Creative Studio',
-      image: 'assets/images/person-3.jpg',
+      content: 'I was skeptical about ordering perfumes online, but this exceeded all expectations. The scent lasts all day and the packaging was luxurious. My colleagues keep asking what I\'m wearing!',
+      name: 'Chioma Eze',
+      rating: 5,
+      image: 'assets/images/person3.jpg',
     },
   ];
 
